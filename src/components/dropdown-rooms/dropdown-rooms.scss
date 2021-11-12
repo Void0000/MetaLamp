@@ -1,7 +1,7 @@
 @import '../../assets/mixinsAndMixes.scss';
 @import '../../plugins/item-quantity-dropdown/item-quantity-dropdown';
 
-.dropdown-guests    {
+.dropdown-rooms    {
 
     @include body;
 
@@ -11,6 +11,10 @@
             @include h3;
             margin-left: 0;
             font-weight: bold;
+        }
+
+        &--comment{
+            margin-left: 8.2rem
         }
     }
 
@@ -23,9 +27,11 @@
 
 
 .iqdropdown  {
+    
     margin-top: 0.259rem;
     @include field;
     height: 2.75rem;
+    width: 16.66rem;
 }
 
 .iqdropdown:hover {
@@ -35,33 +41,20 @@
 .iqdropdown.menu-open {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-   border-color: $darkshade50;
-   border-bottom: none;
-   height: 2.7rem;
+    border-color: $darkshade50;
+    border-bottom: none;
+    height: 2.7rem;
 
 }
 
 .iqdropdown .iqdropdown-menu  {
-    display: none;  //----------------------------------------------------------------------------------------------------------
+  
     box-shadow: none;
     border: 1px solid $darkshade50;
     margin-top: -0.5rem;
-    height: 9.9rem;
+    height: 7.5rem;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
-
-    &__button {
-        position: absolute;
-        @include h3;
-        color: $purple;
-        margin: -5.9rem 0 0 14.1rem;
-    }
-
-    &__button:hover, :focus {
-      
-        color: $darkshade75;
-       
-    }
 }
 
 
@@ -71,7 +64,7 @@
         position: absolute;
         border: 1px solid $darkshade50;
         border-radius: 50%;
-        margin: -1.1rem 0 0 16.25rem;
+        margin: -1rem 0 0 12.8rem;
         transform: scale(0.7);
         width: 2.75rem;
     }
@@ -80,7 +73,7 @@
         position: absolute;
         border: 1px solid $darkshade50;
         border-radius: 50%;
-        margin: -1.1rem 0 0 12.4rem;
+        margin: -1rem 0 0 9rem;
         transform: scale(0.7);
         width: 2.75rem;
     }   
@@ -89,7 +82,7 @@
         @include h3;
         position: absolute;
         border: none;
-        margin: -0.9rem 0 0 14.2rem;
+        margin: -0.9rem 0 0 10.8rem;
     }
     
 }
@@ -100,7 +93,7 @@
         position: absolute;
         border: 1px solid $darkshade50;
         border-radius: 50%;
-        margin: -3.365rem 0 0 16.25rem;
+        margin: -3.365rem 0 0 12.8rem;
         transform: scale(0.7);
         width:2.75rem;
     }
@@ -109,7 +102,7 @@
         position: absolute;
         border: 1px solid $darkshade50;
         border-radius: 50%;
-        margin: -3.365rem 0 0 12.4rem;
+        margin: -3.365rem 0 0 9rem;
         transform: scale(0.7);
         width: 2.75rem;
     }   
@@ -118,7 +111,7 @@
         @include h3;
         position: absolute;
         border: none;
-        margin: -3.2rem 0 0 14.2rem;
+        margin: -3.2rem 0 0 10.8rem;
     }
     
 }
@@ -129,7 +122,7 @@
         position: absolute;
         border: 1px solid $darkshade50;
         border-radius: 50%;
-        margin: -5.7rem 0 0 16.25rem;
+        margin: -5.7rem 0 0 12.8rem;
         transform: scale(0.7);
         width: 2.75rem;
     }
@@ -138,7 +131,7 @@
         position: absolute;
         border: 1px solid $darkshade50;
         border-radius: 50%;
-        margin: -5.7rem 0 0 12.4rem;
+        margin: -5.7rem 0 0 9rem;
         transform: scale(0.7);
         width: 2.75rem;
     }   
@@ -147,10 +140,13 @@
         @include h3;
         position: absolute;
         border: none;
-        margin: -5.6rem 0 0 14.2rem;
+        margin: -5.6rem 0 0 10.8rem;
     }
+
+   
     
 }
+
 
 button.button-increment::after {
     font-family: "material icons";
@@ -174,8 +170,8 @@ button.button-decrement::after {
     content: 'expand_more';
     color: $darkshade50;
     font-size: 1.5rem;
-    margin-left: 17rem;
-    margin-top: -0.15rem
+    margin-left: 13.6rem;
+    margin-top: 0.1rem
 }
 
 .iqdropdown-item {
@@ -200,3 +196,12 @@ button.button-decrement::after {
 
 
 }
+
+// .dropdown-rooms--expanded    {
+
+//     .iqdropdown .iqdropdown-menu  {
+        
+//        display: block;
+//     }
+
+// }

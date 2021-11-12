@@ -16,4 +16,7 @@ import '../../../components/range-slider/range-slider';
 import '../../../components/buttons/buttons';
 import '../../../components/pagination/pagination';
 
+import '../../../components/dropdown-rooms/dropdown-rooms';
+import '../../../components/expandable-checkbox-list/expandable-checkbox-list';
+import '../../../components/expandable-checkbox-list-expand/expandable-checkbox-list-expand';
 

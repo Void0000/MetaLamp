@@ -14,7 +14,9 @@ include ../../../components/rate-button/rate-button
 include ../../../components/range-slider/range-slider
 include ../../../components/buttons/buttons
 include ../../../components/pagination/pagination
-
+include ../../../components/dropdown-rooms/dropdown-rooms
+include ../../../components/expandable-checkbox-list/expandable-checkbox-list
+include ../../../components/expandable-checkbox-list-expand/expandable-checkbox-list-expand
 
 
 
@@ -35,6 +37,14 @@ block main
                 +filter-date-dropdown
             .form-elements__elem--marginTopExtra
                 +subscription-text-field
+            .form-elements__elem--marginTopDouble
+                +dropdown-rooms
+            .form-elements__elem--marginTop
+                +dropdown-rooms--expanded
+            .form-elements__elem--marginTopDouble
+                +expandable-checkbox-list
+            .form-elements__elem--marginTopExtra
+                +expandable-checkbox-list-expand
         .form-elements__cell--secondColumn 
             .form-elements__elem
                 +checkbox-buttons
@@ -53,6 +63,7 @@ block main
                 +buttons
             .form-elements__elem--marginTopExtra
                 +pagination
+            
         
             
         

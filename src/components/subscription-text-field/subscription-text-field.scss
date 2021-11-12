@@ -1,0 +1,45 @@
+@import '../../assets/mixinsAndMixes.scss';
+
+
+.subscription-text-field {
+
+    @include body;
+
+    &__title {
+        margin-left: 12rem;
+
+        &--bold {
+            @include h3;
+            margin-left: 0;
+            font-weight: bold;
+        }
+        
+    }
+
+    &__input {
+        margin-top: 0.3rem;
+        @include field;
+        color: $darkshade50;
+        width: 16.7rem;
+    }
+
+    &__input::placeholder {
+        color: $darkshade25
+    }
+
+    &__input:hover, :focus::placeholder  {
+        border-color: $darkshade50;
+        
+    }
+    
+}
+
+.subscription-text-field__form::after {
+    position: absolute;
+     font-family: "material icons";
+     content: 'arrow_forward';
+     color: $purple;
+     font-size: 1.3rem;
+     margin-left: -2rem;
+     margin-top: 1rem;
+ }

@@ -1,0 +1,78 @@
+@import '../../assets/mixinsAndMixes.scss';
+@import 'nouislider/dist/nouislider.css';
+
+.range-slider {
+
+    @include body;
+    
+    &__title {
+      
+        &--bold {
+            @include h3;
+            margin-left: 0;
+            font-weight: bold;
+        }
+    }
+
+    &__form {
+            width: 16.7rem;
+    }
+
+    &__dash {
+            margin: 0 0 0 0.2rem;
+    }
+
+    &__lower-value {
+            @include body;
+            margin: 0 0 0 4.8rem;
+    }    
+
+    &__upper-value {
+            margin: 0 0 0 0.1rem;
+    }
+
+  }
+
+ 
+
+
+
+
+
+    
+#nonlinear {
+  margin-top: 1.44rem;
+  height: 0.4rem;
+  cursor: pointer;
+}
+    
+.noUi-connect {
+  background: $greenGradient;
+  height: 0.4rem;
+}
+
+.noUi-handle {
+  cursor: pointer;
+
+  margin-top: -0.5rem;
+  padding: 1rem;
+  background: $greenGradient;
+  border: 1px solid white;
+  box-shadow: none;
+  border-radius: 50% ;
+  transform: scale(0.4);
+}
+
+.noUi-handle::before {
+ display: none;
+}
+
+
+.noUi-handle::after {
+  display: none;
+ }
+
+    
+    
+
+

@@ -1,0 +1,87 @@
+@import '../../assets/mixinsAndMixes.scss';
+
+.pagination {
+  margin-top: 2.68rem;
+    @include body;
+    
+    &__title {
+      
+        &--bold {
+            @include h3;
+            margin-left: 0;
+            font-weight: bold;
+        }
+    }
+   
+
+  
+}
+
+.pagination {
+  margin: 4% 0 0 0.15%;
+}
+.pages {
+  margin: 1.8% 0 0 0%;
+  width: 50%;
+}
+.variables-arend {
+margin: 1% 0 0 0.8%;
+@include body;
+}
+    
+ul.simple-pagination {
+	list-style: none;
+}
+
+.simple-pagination {
+	display: block;
+	overflow: hidden;
+	padding: 0 5px 5px 0;
+	margin-top: 1.09rem;
+}
+
+.simple-pagination ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.simple-pagination li {
+  text-align: start;
+	list-style: none;
+  border-radius: 50%;
+  padding: 0.82rem 1rem;
+  width: 2.45rem;
+	float: left;
+}
+span.ellipse.clickable {
+	cursor: pointer;
+}
+
+.ellipse input {
+	width: 1em;
+}
+
+.simple-pagination li.active {
+  background: $purpleGradient;
+  color: white;
+}
+
+.page-link {
+    text-decoration: none;
+    color: $darkshade50;
+
+}
+
+.next::after {
+  position: absolute;
+  font-family: 'material icons';
+  content: 'arrow_forward';
+  color: white;
+  font-size: 1.2rem;
+  background: $greenGradient;
+  border-radius: 50%;
+  padding: 0.65rem 0.65rem;
+  margin-left: -1.2rem;
+  margin-top: -0.85rem;
+}

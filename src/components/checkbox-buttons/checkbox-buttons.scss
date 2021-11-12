@@ -1,0 +1,113 @@
+@import '../../assets/mixinsAndMixes.scss';
+$checkbox-width: 20px;
+
+.checkbox-buttons {
+
+    @include body;
+
+    &__title {
+
+        &--bold {
+            @include h3;
+            margin-left: 0;
+            font-weight: bold;
+        }
+
+    &__form-checkbox {
+
+       
+            margin-top: 15rem;
+      
+    }
+        
+    }
+
+    .checkbox-buttons__form {
+        margin-top: 0.64rem;
+    }
+
+
+// Checkboxes
+input[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+
+
+  & + label {
+    @include body;
+    font-size: 0.8rem;
+    position: relative;
+    display: inline-block;
+    padding: 6px 10px 6px ($checkbox-width + 12);
+    cursor: pointer;
+    margin-top: 0.2rem;
+
+    // Default State
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin: (-$checkbox-width/2) 0 0;
+      width: $checkbox-width;
+      height: $checkbox-width;
+      background: none;
+      border: 1px solid $darkshade25;
+      border-radius: 4px;
+    }
+  }
+
+  & + label[for='checkbox3'] {
+      margin-top: -0.55rem; 
+      padding-top: 1rem;
+      
+
+      
+  }
+
+  // Checked State
+  &:checked + label {
+    &:before {
+        background: none;
+        font-family: 'material icons';
+        content: 'done';
+        color: $purple;
+        position: absolute;
+        border-color: $purple;
+        padding: 0.11rem;
+    }
+  }
+
+
+
+ 
+
+  // Disabled State
+//   &:disabled {
+//     & + label {
+//       cursor: not-allowed;
+
+//       &:before {
+//         background: salmon;
+//       }
+//     }
+
+//     // Disabled Checked
+//     &:checked + label {
+//       &:before {
+//         background: salmon;
+//       }
+//     }
+//   }
+// }
+
+// Extra layout styling
+
+.form-checkbox{
+  position: relative;
+  display: block;
+   
+}
+
+}}

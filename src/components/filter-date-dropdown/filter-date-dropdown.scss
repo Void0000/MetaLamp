@@ -1,0 +1,45 @@
+@import '../../plugins/air-datepicker/air-datepicker';
+@import '../../assets/mixinsAndMixes.scss';
+
+.filter-date-dropdown  {
+    
+    @include body;
+
+    &__title {
+        
+        &--bold {
+            @include h3;
+            margin-left: 0;
+            font-weight: bold;
+        }
+    } 
+    
+}
+
+
+
+#start_one_filter {
+    margin-top: 0.25rem;
+    @include field;
+    width: 16.6rem;
+}
+
+#start_one_filter::placeholder {
+    color: $darkshade25
+}
+
+#start_one_filter:hover, :focus::placeholder  {
+    border-color: $darkshade50;
+    
+}
+
+
+.two::after {
+    position: absolute;
+     font-family: "material icons";
+     content: 'expand_more';
+     color: $darkshade50;
+     font-size: 1.3rem;
+     margin-left: -2rem;
+     margin-top: 1rem;
+ }

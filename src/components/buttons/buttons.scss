@@ -1,0 +1,99 @@
+@import '../../assets/mixinsAndMixes.scss';
+
+
+.buttons {
+    margin-top: 2.8rem;
+    @include body;
+    
+    &__title {
+      
+        &--bold {
+            @include h3;
+            margin-left: 0;
+            font-weight: bold;
+        }
+    }
+
+    &__form {
+      
+      &--border {
+        margin-top: 0.9rem;
+      }
+
+      &--noBorder {
+        margin-top: 0.1rem;
+      }
+
+    }
+
+    &__button {
+            margin-top: 1rem;
+            margin-right: 1.2rem ;
+            background: $purpleGradient;
+            cursor: pointer;
+            border: none;
+            @include h3;
+            color: white;
+            padding: 0.92rem 1.24rem;
+            border-radius: 2rem;
+
+            &--fillButton:hover {
+              opacity: 0.5;
+            }
+          
+            &--borderButton {
+              background:url('../../assets/images/Button Default.png') no-repeat center;
+              color:transparent;
+            }
+
+           
+
+            &--borderButton:hover {
+            background:url('../../assets/images/Button Hover.png') no-repeat center;
+            color:transparent;
+            }
+
+            &--noBorderButton {
+              margin-left: -1.2rem;
+              margin-right: 0.05rem;
+              background: none;
+              border: none;
+              color: $purple;
+            }
+
+            &--noBorderButton:hover {
+             color: $darkshade50
+            }
+
+            &--paysButton {
+              background: $purpleGradient;
+              border: none;
+              color: white;
+              width:  20rem;
+            }
+
+            &--paysButton::before {
+              font-family: 'material icons';
+              content: 'arrow_forward';
+              position: absolute;
+              margin-left: 11.9rem;
+              margin-top: -0.28rem;
+              font-size: 1.4rem;
+              font-weight: normal;
+            }
+
+            &--paysButton:hover {
+              opacity: 0.5;
+            }
+                
+  } 
+    
+
+ }
+
+
+
+ 
+
+
+

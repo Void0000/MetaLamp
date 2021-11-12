@@ -1,0 +1,65 @@
+include ../../../samples/uiKit/uiKit
+include ../../../components/text-field-default/text-field-default
+include ../../../components/text-field-hoverFocus/text-field-hoverFocus
+include ../../../components/dropdown-guests/dropdown-guests
+include ../../../components/masked-text-field/masked-text-field
+include ../../../components/date-dropdown/date-dropdown
+include ../../../components/filter-date-dropdown/filter-date-dropdown
+include ../../../components/subscription-text-field/subscription-text-field
+include ../../../components/checkbox-buttons/checkbox-buttons
+include ../../../components/radio-buttons/radio-buttons
+include ../../../components/toggle/toggle
+include ../../../components/like-button/like-button
+include ../../../components/rate-button/rate-button
+include ../../../components/range-slider/range-slider
+include ../../../components/buttons/buttons
+include ../../../components/pagination/pagination
+
+
+
+
+block main
+    .form-elements
+        .form-elements__cell--firstColumn 
+            .form-elements__elem
+                +text-field-default
+            .form-elements__elem--marginTop
+                +text-field-hoverFocus 
+            .form-elements__elem--marginTop
+                +dropdown-guests  
+            .form-elements__elem--marginTop
+                +masked-text-field
+            .form-elements__elem--marginTopExtra
+                +date-dropdown
+            .form-elements__elem--marginTopExtra
+                +filter-date-dropdown
+            .form-elements__elem--marginTopExtra
+                +subscription-text-field
+        .form-elements__cell--secondColumn 
+            .form-elements__elem
+                +checkbox-buttons
+            .form-elements__elem--marginTopExtra
+                +radio-buttons        
+            .form-elements__elem--marginTopExtra
+                +toggle   
+            .form-elements__elem--marginTopExtra
+                +like-button    
+            .form-elements__elem--marginTopExtra
+                +rate-button 
+        .form-elements__cell--thirdColumn 
+            .form-elements__elem
+                +range-slider
+            .form-elements__elem--marginTopExtra
+                +buttons
+            .form-elements__elem--marginTopExtra
+                +pagination
+        
+            
+        
+        
+                 
+        
+            
+        
+
+            

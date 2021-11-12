@@ -1,0 +1,71 @@
+@import '../../plugins/air-datepicker/air-datepicker';
+@import '../../assets/mixinsAndMixes.scss';
+
+.date-dropdown  {
+
+    @include body;
+
+    &__title {
+        
+        &--bold {
+            @include h3;
+            margin-left: 0;
+            font-weight: bold;
+        }
+        &--boldSecond {
+            @include h3;
+            margin-left: 3.2rem;
+            font-weight: bold;
+        }
+    }
+    
+}
+
+.datepicker {
+    margin-top: 30.9rem;
+}
+
+#start_one, #end_one {
+    margin-top: 0.1rem;
+    @include field;
+    width: 9.4rem;
+}
+
+#end_one {
+    margin-left: 1.25rem;
+}
+
+.one::after {
+   position: absolute;
+    font-family: "material icons";
+    content: 'expand_more';
+    color: $darkshade50;
+    font-size: 1.3rem;
+    margin-left: -2.1rem;
+    margin-top: 0.85rem;
+}
+
+.one::before {
+    position: absolute;
+    font-family: "material icons";
+    content: 'expand_more';
+    color: $darkshade50;
+    font-size: 1.3rem;
+    margin-left: 7.3rem;
+    margin-top: 0.85rem;
+}
+
+#start_one::placeholder,
+ #end_one::placeholder {
+    color: $darkshade25
+}
+
+#start_one:hover, :focus::placeholder  {
+    border-color: $darkshade50;
+    
+}
+
+#end_one:hover, :focus::placeholder  {
+    border-color: $darkshade50;
+    
+}

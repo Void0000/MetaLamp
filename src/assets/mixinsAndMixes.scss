@@ -1,0 +1,65 @@
+$darkshade100:#1F2041;
+$darkshade75: #575871;
+$darkshade50:#8F91A0;
+$darkshade25:#C7C7CF;
+$darkshade5: #f2f3f5;
+$purple: #bc9cfe;
+$green: #6FCF97;
+
+$greenGradient: linear-gradient( #6ecfa0,#67d2dd);
+$purpleGradient: linear-gradient(#b59dfe, #95a2fa );  
+$purpleGradient50: linear-gradient(#ede6ff, #e3e8fe );  
+
+
+// * {
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: inherit;
+// }
+
+@mixin field {
+    border: solid $darkshade25 1px;
+    border-radius: 4px;
+    padding: 0.85rem;
+    letter-spacing: 0.08rem;
+    width: 20rem; 
+    outline:0;    
+}
+
+@mixin hover {
+    border: solid $darkshade50 1px;
+    color: $darkshade75;
+}
+
+@mixin h1 {
+    font-family: 'montserrat';
+    color: $darkshade100;
+    font-weight: bold;
+    font-size: 150%;
+    line-height: 1.813REM;
+}
+
+@mixin h2 {
+    font-family: 'montserrat';
+    color: $darkshade100;
+    font-weight: bold;
+    font-size: 1.188rem;
+    line-height: 1.5rem;  
+}
+
+@mixin h3 {
+    font-family: 'montserrat';
+    color: $darkshade100;
+    font-weight: bold;
+    font-size: 0.71rem;
+    letter-spacing: 0.015rem;
+}
+
+
+@mixin body {
+    font-family: 'montserrat';
+    color: $darkshade50;
+    font-weight: 400;
+    font-size: 0.72rem;
+    letter-spacing: 0.01rem;  
+}

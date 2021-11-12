@@ -1,0 +1,75 @@
+@font-face {
+	font-family: 'Material Icons';
+	src: url('./assets/fonts/MaterialIcons/MaterialIcons-Regular.eot');
+	src: local('☺'), 
+    url('./assets/fonts/MaterialIcons/MaterialIcons-Regular.woff') format('woff'), 
+    url('./assets/fonts/MaterialIcons/MaterialIcons-Regular.ttf') format('truetype'), 
+    url('./assets/fonts/MaterialIcons/MaterialIcons-Regular.svg') format('svg');
+	font-weight: normal;
+    font-style: normal;
+    color: $darkshade75;
+}
+
+@font-face {
+	font-family: 'Material Icons';
+	src: url('./assets/fonts/MaterialIcons/MaterialIconsOutlined-Regular.eot');
+	src: local('☺'), 
+    url('./assets/fonts/MaterialIcons/MaterialIconsOutlined-Regular.woff') format('woff'), 
+    url('./assets/fonts/MaterialIcons/MaterialIconsOutlined-Regular.ttf') format('truetype'), 
+    url('./assets/fonts/MaterialIcons/MaterialIconsOutlined-Regular.svg') format('svg');
+	font-weight: normal;
+    font-style: normal;
+    color: $darkshade75;
+}
+
+@font-face {
+	font-family: 'Conv_Montserrat-Bold';
+	src: url('./assets/fonts/Montserrat/Montserrat-Bold.eot');
+	src: local('☺'), 
+    url('./assets/fonts/Montserrat/Montserrat-Bold.woff') format('woff'), 
+    url('./assets/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype'), 
+    url('./assets/fonts/Montserrat/Montserrat-Bold.svg') format('svg');
+	font-weight: normal;
+    font-style: normal;
+    color: $darkshade75;
+}
+
+@font-face {
+	font-family: 'Conv_Montserrat-Regular';
+	src: url('./assets/fonts/Montserrat/Montserrat-Regular.eot');
+	src: local('☺'), 
+    url('./assets/fonts/Montserrat/Montserrat-Regular.woff') format('woff'), 
+    url('./assets/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype'), 
+    url('./assets/fonts/Montserrat/Montserrat-Regular.svg') format('svg');
+	font-weight: normal;
+    font-style: normal;
+    color: $darkshade75;
+}
+
+.material-icons {
+    position: absolute;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.4vw;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+

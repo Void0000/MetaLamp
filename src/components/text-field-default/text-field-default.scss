@@ -1,0 +1,33 @@
+@import '../../assets/mixinsAndMixes.scss';
+
+.text-field-default {
+
+    @include body;
+
+    &__title {
+        margin-left: 12rem;
+
+        &--bold {
+            @include h3;
+            margin-left: 0;
+            font-weight: bold;
+        }
+        
+    }
+
+    &__input {
+        margin-top: 0.3rem;
+        @include field;
+        color: $darkshade50
+    }
+
+    &__input::placeholder {
+        color: $darkshade25
+    }
+
+    &__input:hover, :focus::placeholder  {
+        border-color: $darkshade50;
+        
+    }
+    
+}

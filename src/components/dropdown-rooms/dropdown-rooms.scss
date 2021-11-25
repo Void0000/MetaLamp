@@ -1,207 +1,118 @@
 @import '../../assets/mixinsAndMixes.scss';
-@import '../../plugins/item-quantity-dropdown/item-quantity-dropdown';
 
 .dropdown-rooms    {
 
-    @include body;
+        @include body;
 
-    &__title {
-        
-        &--bold {
-            @include h3;
-            margin-left: 0;
-            font-weight: bold;
+        &__title {
+            
+            &--bold {
+                @include h3;
+                font-weight: bold;
+            }
+        }
+        &__form{
+            position: relative;
         }
 
-        &--comment{
-            margin-left: 8.2rem
+        &__form::after{
+            cursor: pointer;
+            position: absolute;
+            font-family: 'material icons';
+            content: 'expand_more';
+            font-size: 1.5rem;
+            top: 0.98rem;
+            left: 14.5rem;
         }
-    }
 
+        &__input {
+            cursor: pointer;
+            @include field;
+            margin-top: 0.25rem;
+            width: 14.85rem;
+        }
 
+        &__input--opened {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom: none;
+            border: 0.5px solid $darkshade50;
+        }
 
-.iqdropdown .iqdropdown-selection {
-    @include body;
-  } 
+        &__input:hover,
+        &__input:focus {
+            @include hover
+        }
 
+        &__menu {
+            display: none;
+        }
 
-
-.iqdropdown  {
-    
-    margin-top: 0.259rem;
-    @include field;
-    height: 2.75rem;
-    width: 16.66rem;
-}
-
-.iqdropdown:hover {
-    @include hover
-}
-
-.iqdropdown.menu-open {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-color: $darkshade50;
-    border-bottom: none;
-    height: 2.7rem;
-
-}
-
-.iqdropdown .iqdropdown-menu  {
-  
-    box-shadow: none;
-    border: 1px solid $darkshade50;
-    margin-top: -0.5rem;
-    height: 7.5rem;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
-
-#item1 {
-    
-    button.button-increment {
+        &__menu--opened {
+        background: white;
         position: absolute;
-        border: 1px solid $darkshade50;
-        border-radius: 50%;
-        margin: -1rem 0 0 12.8rem;
-        transform: scale(0.7);
-        width: 2.75rem;
-    }
-
-    button.button-decrement {
-        position: absolute;
-        border: 1px solid $darkshade50;
-        border-radius: 50%;
-        margin: -1rem 0 0 9rem;
-        transform: scale(0.7);
-        width: 2.75rem;
-    }   
-
-    .counter {
+        top: 2.9rem;
+        padding: 0.425rem 0.4rem;
+        text-transform: uppercase;
+        border: 0.5px solid $darkshade50;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        display: grid;
+        grid-template-columns: 9.9rem 1.85rem 2.1rem 1.85rem;
+        row-gap: 0.45rem;
+        vertical-align: middle;
         @include h3;
-        position: absolute;
-        border: none;
-        margin: -0.9rem 0 0 10.8rem;
-    }
-    
-}
+        }
 
-#item2 {
-    
-    button.button-increment {
-        position: absolute;
-        border: 1px solid $darkshade50;
-        border-radius: 50%;
-        margin: -3.365rem 0 0 12.8rem;
-        transform: scale(0.7);
-        width:2.75rem;
-    }
+        &__adults,
+        &__children, 
+        &__infant {
+            padding: 0.4rem 0.31rem;
+        }
 
-    button.button-decrement {
-        position: absolute;
-        border: 1px solid $darkshade50;
-        border-radius: 50%;
-        margin: -3.365rem 0 0 9rem;
-        transform: scale(0.7);
-        width: 2.75rem;
-    }   
+        &__adults-button-decrease,
+        &__children-button-decrease,
+        &__infant-button-decrease,
+        &__adults-button-increase,
+        &__children-button-increase,
+        &__infant-button-increase {
+            cursor: pointer;
+            height: 1.85rem;
+            vertical-align: text-top;
+            border-radius: 50% ;
+            border: 1px solid $darkshade50;
+            background: none;
+            padding: 0.1rem 0.55rem;
+            top: -1rem;
+        }
 
-    .counter {
-        @include h3;
-        position: absolute;
-        border: none;
-        margin: -3.2rem 0 0 10.8rem;
-    }
-    
-}
+        &__adults-button-decrease::after,
+        &__children-button-decrease::after,
+        &__infant-button-decrease::after {
+            font-family: 'material icons';
+            content: 'remove';
+            font-size: 0.5rem;
+            color: $darkshade75;                      
+        }
 
-#item3 {
-    
-    button.button-increment {
-        position: absolute;
-        border: 1px solid $darkshade50;
-        border-radius: 50%;
-        margin: -5.7rem 0 0 12.8rem;
-        transform: scale(0.7);
-        width: 2.75rem;
-    }
+        &__adults-count,
+        &__children-count,
+        &__infant-count {
+            text-align: center;
+            padding-top: 0.3rem;
+        }
 
-    button.button-decrement {
-        position: absolute;
-        border: 1px solid $darkshade50;
-        border-radius: 50%;
-        margin: -5.7rem 0 0 9rem;
-        transform: scale(0.7);
-        width: 2.75rem;
-    }   
-
-    .counter {
-        @include h3;
-        position: absolute;
-        border: none;
-        margin: -5.6rem 0 0 10.8rem;
-    }
-
-   
-    
-}
-
-
-button.button-increment::after {
-    font-family: "material icons";
-    content: 'add';
-    color: $darkshade50;
-    font-size: 1rem;
-    margin-left: -0.45rem;
-}
-
-button.button-decrement::after {
-    font-family: "material icons";
-    content: 'remove';
-    color: $darkshade50;
-    font-size: 1rem;
-    margin-left: -0.45rem;
-}
-
-.iqdropdown::after {
-    position: absolute;
-    font-family: "material icons";
-    content: 'expand_more';
-    color: $darkshade50;
-    font-size: 1.5rem;
-    margin-left: 13.6rem;
-    margin-top: 0.1rem
-}
-
-.iqdropdown-item {
-    @include h3;
-    font-weight: bold;
-}
-
-.iqdropdown__category--adults {
-    position: absolute;
-    margin: -3.9rem 0 0 1rem;
-}
-
-.iqdropdown__category--chidlren {
-    position: absolute;
-    margin: -6.2rem 0 0 1rem;
-}
-
-.iqdropdown__category--infant {
-    position: absolute;
-    margin: -8.65rem 0 0 1rem;
-}
-
-
-}
-
-// .dropdown-rooms--expanded    {
-
-//     .iqdropdown .iqdropdown-menu  {
+        &__adults-button-increase::after,
+        &__children-button-increase::after,
+        &__infant-button-increase::after {
+            font-family: 'material icons';
+            content: 'add';
+            color: $darkshade75;
+            font-size: 0.7rem;         
+        }
+             
         
-//        display: block;
-//     }
+    
+    }
 
-// }
+

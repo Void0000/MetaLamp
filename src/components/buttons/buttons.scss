@@ -1,95 +1,111 @@
 @import '../../assets/mixinsAndMixes.scss';
 
-
 .buttons {
     margin-top: 2.8rem;
     @include body;
-    
     &__title {
       
         &--bold {
+          text-transform: uppercase;
             @include h3;
             margin-left: 0;
             font-weight: bold;
         }
     }
 
-    &__form {
-      
-      &--border {
-        margin-top: 0.9rem;
-      }
-
-      &--noBorder {
-        margin-top: 0.1rem;
-      }
-
+    &__fill-button {
+      @include h3;
+      color: white;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-top: 1rem;
+      margin-left: 0.05rem;
+      height: 2.74rem;
+      width: 6.2rem;
+      border: none;
+      border-radius: 2rem;
+      background: $purpleGradient;
     }
 
-    &__button {
-            margin-top: 1rem;
-            margin-right: 1.2rem ;
-            background: $purpleGradient;
-            cursor: pointer;
-            border: none;
-            @include h3;
-            color: white;
-            padding: 0.92rem 1.24rem;
-            border-radius: 2rem;
+    &__fill-button-second {
+     margin-left: 1.15rem;
+    }
 
-            &--fillButton:hover {
-              opacity: 0.5;
-            }
-          
-            &--borderButton {
-              background:url('../../assets/images/Button Default.png') no-repeat center;
-              color:transparent;
-            }
-
-           
-
-            &--borderButton:hover {
-            background:url('../../assets/images/Button Hover.png') no-repeat center;
-            color:transparent;
-            }
-
-            &--noBorderButton {
-              margin-left: -1.2rem;
-              margin-right: 0.05rem;
-              background: none;
-              border: none;
-              color: $purple;
-            }
-
-            &--noBorderButton:hover {
-             color: $darkshade50
-            }
-
-            &--paysButton {
-              background: $purpleGradient;
-              border: none;
-              color: white;
-              width:  20rem;
-            }
-
-            &--paysButton::before {
-              font-family: 'material icons';
-              content: 'arrow_forward';
-              position: absolute;
-              margin-left: 11.9rem;
-              margin-top: -0.28rem;
-              font-size: 1.4rem;
-              font-weight: normal;
-            }
-
-            &--paysButton:hover {
-              opacity: 0.5;
-            }
-                
-  } 
+    &__fill-button:hover, 
+    &__fill-button:focus {
+           opacity: 0.5;
+    }
     
+    &__counter-button {
+      @include h3;
+      color: transparent;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-top: 1.9rem;
+      height: 2.74rem;
+      width: 6.2rem;
+      border: none;
+      border-radius: 2rem;
+      background:url('../../assets/images/Button Default.jpg') no-repeat center;
+    }
 
- }
+    &__counter-button-second {
+     margin-left: 1.2rem;
+    }
+
+    &__counter-button:hover, 
+    &__counter-button:focus {
+      background:url('../../assets/images/Button Hover.jpg') no-repeat center;
+    }
+
+    &__no-border-button {
+      @include h3;
+      color: $purple;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-top: 1.8rem;
+      border: none;
+      background:none;
+    }
+
+    &__no-border-button-second {
+     margin-left: 0.5rem;
+    }
+
+    &__no-border-button:hover, 
+    &__no-border-button:focus {
+      color: $darkshade50;
+    }
+
+    &__pay-button {
+      position: relative;
+      @include h3;
+      color: white;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-top: 1.79rem;
+      height: 2.74rem;
+      width: 20rem;
+      border: none;
+      border-radius: 2rem;
+      background: $purpleGradient;
+    }
+
+    &__pay-button::after {
+      position: absolute;
+      text-transform: lowercase;
+      font-family: 'material icons';
+      font-size: 1.35rem;
+      font-weight: normal;
+      content: 'arrow_forward';
+      top: 0.7rem;
+      left: 17.94rem;
+      }
+
+    &__pay-button:hover, :focus {
+      opacity: 0.5;
+    }
+}
 
 
 

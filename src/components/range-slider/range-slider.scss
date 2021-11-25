@@ -2,12 +2,12 @@
 @import 'nouislider/dist/nouislider.css';
 
 .range-slider {
-
     @include body;
     
     &__title {
       
         &--bold {
+          text-transform: uppercase;
             @include h3;
             margin-left: 0;
             font-weight: bold;
@@ -15,6 +15,7 @@
     }
 
     &__form {
+
             width: 16.7rem;
     }
 
@@ -35,26 +36,27 @@
 
  
 
-
-
-
-
     
 #nonlinear {
+ 
   margin-top: 1.44rem;
   height: 0.4rem;
   cursor: pointer;
 }
     
 .noUi-connect {
+  position: relative;
   background: $greenGradient;
   height: 0.4rem;
 }
 
+.noUi-origin {
+  position: absolute;
+  top: -0.5rem;
+  }
+
 .noUi-handle {
   cursor: pointer;
-
-  margin-top: -0.5rem;
   padding: 1rem;
   background: $greenGradient;
   border: 1px solid white;
@@ -67,9 +69,12 @@
  display: none;
 }
 
-
 .noUi-handle::after {
   display: none;
+ }
+
+ .noUi-handle:focus {
+   opacity: 1;
  }
 
     

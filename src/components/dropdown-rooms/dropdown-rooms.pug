@@ -1,37 +1,35 @@
 mixin dropdown-rooms
        
+    - var title = "DROPDOWN"
+  
+       
     .dropdown-rooms
-        span.dropdown-rooms__title.dropdown-rooms__title--bold DROPDOWN
-        span.dropdown-rooms__title.dropdown-rooms__title--comment DEFAULT
-        form.dropdown-rooms__form
-            .iqdropdown
-                p.iqdropdown-selection
-                .iqdropdown-menu
-                    .iqdropdown-menu-option(id='item1')
-                    .iqdropdown__category.iqdropdown__category--adults  
-                        p.iqdropdown-item СПАЛЬНИ
-                    .iqdropdown-menu-option(id='item2')
-                    .iqdropdown__category.iqdropdown__category--chidlren
-                        p.iqdropdown-item КРОВАТИ
-                    .iqdropdown-menu-option(id='item3')
-                    .iqdropdown__category.iqdropdown__category--infant
-                        p.iqdropdown-item ВАННЫЕ КОМНАТЫ 
+        span.dropdown-rooms__title.dropdown-rooms__title--bold #{title}
+        form.dropdown-rooms__form  
+            input.dropdown-rooms__input.dropdown-rooms__input-js-open(text readonly)
+            .dropdown-rooms__menu
+                .dropdown-rooms__adults спальни
+        
+                button(type='button').dropdown-rooms__adults-button-decrease 
+                  
+                span.dropdown-rooms__adults-count 0
+                  
+                button(type='button').dropdown-rooms__adults-button-increase 
+                 
+                .dropdown-rooms__children кровати
+        
+                button(type='button').dropdown-rooms__children-button-decrease 
+                  
+                span.dropdown-rooms__children-count 0
+                  
+                button(type='button').dropdown-rooms__children-button-increase 
 
-mixin dropdown-rooms--expanded
-                   
-    .dropdown-rooms.dropdown-rooms--expanded
-        span.dropdown-rooms__title.dropdown-rooms__title--bold DROPDOWN
-        span.dropdown-rooms__title.dropdown-rooms__title--comment EXPADED
-        form.dropdown-rooms__form
-            .iqdropdown
-                p.iqdropdown-selection
-                .iqdropdown-menu
-                    .iqdropdown-menu-option(id='item1')
-                    .iqdropdown__category.iqdropdown__category--adults  
-                        p.iqdropdown-item СПАЛЬНИ
-                    .iqdropdown-menu-option(id='item2')
-                    .iqdropdown__category.iqdropdown__category--chidlren
-                        p.iqdropdown-item КРОВАТИ
-                    .iqdropdown-menu-option(id='item3')
-                    .iqdropdown__category.iqdropdown__category--infant
-                        p.iqdropdown-item ВАННЫЕ КОМНАТЫ 
+                .dropdown-rooms__infant ванные комнаты
+        
+                button(type='button').dropdown-rooms__infant-button-decrease 
+                  
+                span.dropdown-rooms__infant-count 0
+                  
+                button(type='button').dropdown-rooms__infant-button-increase 
+
+

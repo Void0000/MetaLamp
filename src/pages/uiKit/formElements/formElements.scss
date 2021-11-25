@@ -1,46 +1,35 @@
 
-
  .form-elements {
     display: grid;
     grid-template-columns: repeat(3, 32rem);
-    justify-content: space-evenly;
+    column-gap: 4.6rem;
     grid-row-gap: 1rem;
-     
+    height: 100rem;     
     &__elem {
-
         &--marginTop {
             margin-top: 1.35rem;
         }
-
         &--marginTopExtra {
             margin-top: 2.5rem;
         }
-
         &--marginTopDouble
         {
             margin-top: 6.5rem;
         }
-
-
        
-
     }
     &__cell {
-
         &--firstColumn {
-            margin-left: 2.8rem;
+            margin-left: 8.8rem;
             }
-
         &--secondColumn {
-            margin-left: -7.4rem;
+            margin-left: 0rem;
             }
-
         &--thirdColumn {
-            margin-left: -20.8rem;
+            margin-left: -12rem;
             }
         
     }
     
-
     
 }

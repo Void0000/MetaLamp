@@ -8,6 +8,7 @@
     &__title {
         
         &--bold {
+            text-transform: uppercase;
             @include h3;
             margin-left: 0;
             font-weight: bold;
@@ -16,12 +17,26 @@
     
 }
 
+.two {
+    position: relative;
+}
+
+.two::after {
+    position: absolute;
+     font-family: "material icons";
+     content: 'expand_more';
+     color: $darkshade50;
+     font-size: 1.3rem;
+     left: 14.6rem;
+     top: 1rem;
+ }
 
 
 #start_one_filter {
+    cursor: pointer;
     margin-top: 0.25rem;
     @include field;
-    width: 16.6rem;
+    width: 14.85rem;
 }
 
 #start_one_filter::placeholder {
@@ -30,16 +45,6 @@
 
 #start_one_filter:hover, :focus::placeholder  {
     border-color: $darkshade50;
-    
 }
 
 
-.two::after {
-    position: absolute;
-     font-family: "material icons";
-     content: 'expand_more';
-     color: $darkshade50;
-     font-size: 1.3rem;
-     margin-left: -2rem;
-     margin-top: 1rem;
- }

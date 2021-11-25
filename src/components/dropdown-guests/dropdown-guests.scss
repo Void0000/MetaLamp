@@ -1,202 +1,126 @@
 @import '../../assets/mixinsAndMixes.scss';
-@import '../../plugins/item-quantity-dropdown/item-quantity-dropdown';
 
 .dropdown-guests    {
 
-    @include body;
+        @include body;
 
-    &__title {
-        
-        &--bold {
-            @include h3;
-            margin-left: 0;
-            font-weight: bold;
+        &__title {
+            
+            &--bold {
+                @include h3;
+                margin-left: 0;
+                font-weight: bold;
+            }
         }
-    }
+        &__form{
+            position: relative;
+        }
 
+        &__form::after{
+            cursor: pointer;
+            position: absolute;
+            font-family: 'material icons';
+            content: 'expand_more';
+            font-size: 1.5rem;
+            top: 0.86rem;
+            left: 17.85rem;
+        }
 
+        &__input {
+            cursor: pointer;
+            @include field;
+            margin-top: 0.25rem;
+        }
 
-.iqdropdown .iqdropdown-selection {
-    @include body;
-  } 
+        &__input--opened {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom: none;
+        }
 
+        &__input:hover,
+        &__input:focus {
+            @include hover
+        }
 
+        &__menu {
+            display: none;
+        }
 
-.iqdropdown  {
-    margin-top: 0.259rem;
-    @include field;
-    height: 2.75rem;
-}
-
-.iqdropdown:hover {
-    @include hover
-}
-
-.iqdropdown.menu-open {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-   border-color: $darkshade50;
-   border-bottom: none;
-   height: 2.7rem;
-
-}
-
-.iqdropdown .iqdropdown-menu  {
-    display: none;  //----------------------------------------------------------------------------------------------------------
-    box-shadow: none;
-    border: 1px solid $darkshade50;
-    margin-top: -0.5rem;
-    height: 9.9rem;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-
-    &__button {
+        &__menu--opened {
+        background: white;
         position: absolute;
+        top: 2.88rem;
+        padding: 0.48rem;
+        text-transform: uppercase;
+        border: 0.5px solid $darkshade50;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        display: grid;
+        grid-template-columns: 13.3rem 1.85rem 1.95rem 1.85rem;
+        row-gap: 0.45rem;
+        vertical-align: middle;
         @include h3;
-        color: $purple;
-        margin: -5.9rem 0 0 14.1rem;
-    }
+        }
 
-    &__button:hover, :focus {
-      
-        color: $darkshade75;
-       
-    }
+        &__adults,
+        &__children, 
+        &__infant {
+            padding: 0.4rem 0.31rem;
+        }
+
+        &__adults-button-decrease,
+        &__children-button-decrease,
+        &__infant-button-decrease,
+        &__adults-button-increase,
+        &__children-button-increase,
+        &__infant-button-increase {
+            cursor: pointer;
+            height: 1.85rem;
+            vertical-align: text-top;
+            border-radius: 50% ;
+            border: 1px solid $darkshade50;
+            background: none;
+            padding: 0.1rem 0.55rem;
+            top: -1rem;
+        }
+
+        &__adults-button-decrease::after,
+        &__children-button-decrease::after,
+        &__infant-button-decrease::after {
+            font-family: 'material icons';
+            content: 'remove';
+            font-size: 0.5rem;
+            color: $darkshade75;                      
+        }
+
+        &__adults-count,
+        &__children-count,
+        &__infant-count {
+            text-align: center;
+            padding-top: 0.3rem;
+        }
+
+        &__adults-button-increase::after,
+        &__children-button-increase::after,
+        &__infant-button-increase::after {
+            font-family: 'material icons';
+            content: 'add';
+            color: $darkshade75;
+            font-size: 0.7rem;         
+        }
+             
+        &__close-button {
+            cursor: pointer;
+            padding: 0.8rem 0 0.28rem 0;
+            @include h3;
+            text-transform: uppercase;
+            color: $purple;
+            background: none;
+            border: none;
+            grid-column-start: 2;
+            grid-column-end: 5;
+        }
 }
 
 
-#item1 {
-    
-    button.button-increment {
-        position: absolute;
-        border: 1px solid $darkshade50;
-        border-radius: 50%;
-        margin: -1.1rem 0 0 16.25rem;
-        transform: scale(0.7);
-        width: 2.75rem;
-    }
-
-    button.button-decrement {
-        position: absolute;
-        border: 1px solid $darkshade50;
-        border-radius: 50%;
-        margin: -1.1rem 0 0 12.4rem;
-        transform: scale(0.7);
-        width: 2.75rem;
-    }   
-
-    .counter {
-        @include h3;
-        position: absolute;
-        border: none;
-        margin: -0.9rem 0 0 14.2rem;
-    }
-    
-}
-
-#item2 {
-    
-    button.button-increment {
-        position: absolute;
-        border: 1px solid $darkshade50;
-        border-radius: 50%;
-        margin: -3.365rem 0 0 16.25rem;
-        transform: scale(0.7);
-        width:2.75rem;
-    }
-
-    button.button-decrement {
-        position: absolute;
-        border: 1px solid $darkshade50;
-        border-radius: 50%;
-        margin: -3.365rem 0 0 12.4rem;
-        transform: scale(0.7);
-        width: 2.75rem;
-    }   
-
-    .counter {
-        @include h3;
-        position: absolute;
-        border: none;
-        margin: -3.2rem 0 0 14.2rem;
-    }
-    
-}
-
-#item3 {
-    
-    button.button-increment {
-        position: absolute;
-        border: 1px solid $darkshade50;
-        border-radius: 50%;
-        margin: -5.7rem 0 0 16.25rem;
-        transform: scale(0.7);
-        width: 2.75rem;
-    }
-
-    button.button-decrement {
-        position: absolute;
-        border: 1px solid $darkshade50;
-        border-radius: 50%;
-        margin: -5.7rem 0 0 12.4rem;
-        transform: scale(0.7);
-        width: 2.75rem;
-    }   
-
-    .counter {
-        @include h3;
-        position: absolute;
-        border: none;
-        margin: -5.6rem 0 0 14.2rem;
-    }
-    
-}
-
-button.button-increment::after {
-    font-family: "material icons";
-    content: 'add';
-    color: $darkshade50;
-    font-size: 1rem;
-    margin-left: -0.45rem;
-}
-
-button.button-decrement::after {
-    font-family: "material icons";
-    content: 'remove';
-    color: $darkshade50;
-    font-size: 1rem;
-    margin-left: -0.45rem;
-}
-
-.iqdropdown::after {
-    position: absolute;
-    font-family: "material icons";
-    content: 'expand_more';
-    color: $darkshade50;
-    font-size: 1.5rem;
-    margin-left: 17rem;
-    margin-top: -0.15rem
-}
-
-.iqdropdown-item {
-    @include h3;
-    font-weight: bold;
-}
-
-.iqdropdown__category--adults {
-    position: absolute;
-    margin: -3.9rem 0 0 1rem;
-}
-
-.iqdropdown__category--chidlren {
-    position: absolute;
-    margin: -6.2rem 0 0 1rem;
-}
-
-.iqdropdown__category--infant {
-    position: absolute;
-    margin: -8.65rem 0 0 1rem;
-}
-
-
-}

@@ -2,25 +2,25 @@
 
 
 .subscription-text-field {
-
+    position: relative;
     @include body;
 
     &__title {
         margin-left: 12rem;
 
         &--bold {
+            text-transform: uppercase;
             @include h3;
             margin-left: 0;
             font-weight: bold;
         }
-        
     }
 
     &__input {
         margin-top: 0.3rem;
         @include field;
         color: $darkshade50;
-        width: 16.7rem;
+        width: 14.87rem;
     }
 
     &__input::placeholder {
@@ -29,17 +29,22 @@
 
     &__input:hover, :focus::placeholder  {
         border-color: $darkshade50;
-        
     }
     
 }
 
-.subscription-text-field__form::after {
+.subscription-text-field__button {
+    cursor: pointer;
     position: absolute;
+    border: none;
+    background: none;
+    left: 14.2rem;
+    top: 1.9rem;
+}
+
+.subscription-text-field__button::after{
      font-family: "material icons";
      content: 'arrow_forward';
      color: $purple;
-     font-size: 1.3rem;
-     margin-left: -2rem;
-     margin-top: 1rem;
+     font-size: 1.4rem;
  }

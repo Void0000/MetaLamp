@@ -1,34 +1,25 @@
 mixin expandable-checkbox-list
-       
-    .expandable-checkbox-list
-                    span.expandable-checkbox-list__title.expandable-checkbox-list__title--bold EXPANDABLE CHECKBOX LIST
-                    form.expandable-checkbox-list__form
-                    .expandable-checkbox-list__forms--hidden
-                        .form-checkbox
-                            input#checkbox5(type='checkbox' name='expandable')
-                            label(for='checkbox5') Завтрак
-                        .form-checkbox
-                            input#checkbox6(type='checkbox' checked='checked' name='expandable')
-                            label(for='checkbox6') Письменный стол
-                        .form-checkbox
-                            input#checkbox7(type='checkbox' checked='checked'  name='expandable')
-                            label(for='checkbox7') Стул для кормления
-                        .form-checkbox
-                            input#checkbox8(type='checkbox' checked='checked' name='expandable')
-                            label(for='checkbox8') Кроватка
-                        .form-checkbox
-                            input#checkbox9(type='checkbox'  name='expandable')
-                            label(for='checkbox9') Телевизор
-                        .form-checkbox
-                            input#checkbox10(type='checkbox'  name='expandable')
-                            label(for='checkbox10') Шампунь
-
-
-                
-    
-        
-        
-     
-    
-
-
+               - var title = "expandable checkbox list"
+                    .expandable_checkbox_list
+                    details.expandable_checkbox_list__details
+                        summary.expandable_checkbox_list__summary #{title}
+                        form.expandable_checkbox_list__form
+                            label.expandable_checkbox_list__container  Завтрак
+                                input.expandable_checkbox_list__input(type="checkbox" checked)
+                                span.expandable_checkbox_list__checkmark  
+                            label.expandable_checkbox_list__container  Письменный стол
+                                input.expandable_checkbox_list__input(type="checkbox" checked) 
+                                span.expandable_checkbox_list__checkmark 
+                            label.expandable_checkbox_list__container  Стул для кормления
+                                input.expandable_checkbox_list__input(type="checkbox") 
+                                span.expandable_checkbox_list__checkmark
+                            label.expandable_checkbox_list__container Кроватка
+                                input.expandable_checkbox_list__input(type="checkbox" checked)
+                                span.expandable_checkbox_list__checkmark  
+                            label.expandable_checkbox_list__container Телевизор
+                                input.expandable_checkbox_list__input(type="checkbox" checked) 
+                                span.expandable_checkbox_list__checkmark 
+                            label.expandable_checkbox_list__container Шампунь
+                                input.expandable_checkbox_list__input(type="checkbox") 
+                                span.expandable_checkbox_list__checkmark 
+           

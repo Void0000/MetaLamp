@@ -1,6 +1,8 @@
 mixin filter-date-dropdown
 
-    span.filter-date-dropdown__title.filter-date-dropdown__title--bold FILTER DATE DROPDOWN 
+    -var title = "filter date dropdown"
+
+    span.filter-date-dropdown__title.filter-date-dropdown__title--bold #{title}
     form.filter-date-dropdown__form
       .two
-        input#start_one_filter.datepicker-here(type='text' data-range='true' data-multiple-dates-separator=' - ' )
+        input#start_one_filter.datepicker-here(type="text" data-range="true" data-multiple-dates-separator=" - " )

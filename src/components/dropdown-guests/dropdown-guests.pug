@@ -1,18 +1,40 @@
 mixin dropdown-guests   
+
+    - var title = "DROPDOWN"
+  
        
     .dropdown-guests
-        span.dropdown-guests__title.dropdown-guests__title--bold DROPDOWN
-        form.dropdown-guests__form
-            .iqdropdown
-                p.iqdropdown-selection
-                .iqdropdown-menu
-                    .iqdropdown-menu-option(id='item1')
-                    .iqdropdown__category.iqdropdown__category--adults  
-                        p.iqdropdown-item ВЗРОСЛЫЕ 
-                    .iqdropdown-menu-option(id='item2')
-                    .iqdropdown__category.iqdropdown__category--chidlren
-                        p.iqdropdown-item ДЕТИ
-                    .iqdropdown-menu-option(id='item3')
-                    .iqdropdown__category.iqdropdown__category--infant
-                        p.iqdropdown-item МЛАДЕНЦЫ 
-                    button.iqdropdown-menu__button ПРИМЕНИТЬ
+        span.dropdown-guests__title.dropdown-guests__title--bold #{title}
+        form.dropdown-guests__form  
+            input.dropdown-guests__input.dropdown-guests__input-js-open(text readonly)
+            .dropdown-guests__menu
+                .dropdown-guests__adults взрослые
+        
+                button(type='button').dropdown-guests__adults-button-decrease 
+                  
+                span.dropdown-guests__adults-count 0
+                  
+                button(type='button').dropdown-guests__adults-button-increase 
+                 
+                .dropdown-guests__children дети
+        
+                button(type='button').dropdown-guests__children-button-decrease 
+                  
+                span.dropdown-guests__children-count 0
+                  
+                button(type='button').dropdown-guests__children-button-increase 
+
+                .dropdown-guests__infant младенцы
+        
+                button(type='button').dropdown-guests__infant-button-decrease 
+                  
+                span.dropdown-guests__infant-count 0
+                  
+                button(type='button').dropdown-guests__infant-button-increase 
+
+                button(type='button').dropdown-guests__close-button применить
+                  
+            
+                   
+                
+                   

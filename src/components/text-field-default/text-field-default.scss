@@ -1,10 +1,12 @@
 @import '../../assets/mixinsAndMixes.scss';
 
 .text-field-default {
-
+    
     @include body;
 
     &__title {
+       text-transform: uppercase;
+        
         margin-left: 12rem;
 
         &--bold {
@@ -16,6 +18,7 @@
     }
 
     &__input {
+        
         margin-top: 0.3rem;
         @include field;
         color: $darkshade50

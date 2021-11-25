@@ -5,6 +5,7 @@
     @include body;
 
     &__title {
+        text-transform: uppercase;
         margin-left: 12rem;
 
         &--bold {

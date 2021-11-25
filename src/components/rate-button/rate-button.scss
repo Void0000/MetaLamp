@@ -1,12 +1,12 @@
 @import '../../assets/mixinsAndMixes.scss';
 
 .rate-button {
-
     @include body;
-    
+    position: relative;
     &__title {
       
         &--bold {
+            text-transform: uppercase;
             @include h3;
             margin-left: 0;
             font-weight: bold;
@@ -14,43 +14,32 @@
     }
     
     &__form {
-     
+        
       margin-top: 1.3rem;
-      margin-left: 1rem;
+      margin-left: 0.5rem;
       direction: rtl;
-      width: 6.5rem;
-
-        &--secondRate {
-
-            position: absolute;
-            margin-left: 9.95rem;
-            margin-top: -1.2em;
-            width: 6.4rem;
-        }
-
+      width: 7rem;
+        
     } 
+
+    &__form > input {
+        display: none;
+    }
+
+    &__form > label {
+        cursor: pointer;
+        background:url('../../assets/images/star_border.jpg') no-repeat center;
+        padding: 0.2rem 0.75rem;
+    }
+
+    &__form > input:checked ~ label {
+        background:url('../../assets/images/star.jpg') no-repeat center;
+    }
+
+    &__form--second {
+        position: absolute;
+        top: 0.9rem;
+        left: 8.8rem;
+    }
   
-    input[type="radio"] {
-      display: none;
-}
-      
-label {
-      background:url('../../assets/images/star_border.jpg') no-repeat center;
-      padding: 11.8%;
-}
-                             
-label:hover, label:hover ~ label {
-       background:url('../../assets/images/star.jpg') no-repeat center;
-}
-            
-input[type="radio"]:checked ~ label {
-      background:url('../../assets/images/star.jpg') no-repeat center;
-}
-
-.formRadioSecond {
-      margin: -2%  0 0 23.2%;
-      padding-left: 0.1%;
-}
-
 }    
-  

@@ -1,9 +1,12 @@
 mixin date-dropdown
 
-    span.date-dropdown__title.date-dropdown__title--bold DATE DROPDOWN 
-    span.date-dropdown__title.date-dropdown__title--boldSecond DATE DROPDOWN
+  - var title = "DATE DROPDOWN"
+  - var titleSecond = "DATE DROPDOWN"
+
+    span.date-dropdown__title.date-dropdown__title--bold #{title}
+    span.date-dropdown__title.date-dropdown__title--boldSecond #{titleSecond}
     form.date-dropdown__form
       .one
-        input#start_one.datepicker-here(type='text' data-range='true' data-multiple-dates-separator=' - ' placeholder='ДД.ММ.ГГГГ')
-        input#end_one(type='text' placeholder='19.08.2021')
+        input#start_one.datepicker-here(type="text" data-range="true" data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ")
+        input#end_one(type="text" placeholder="19.08.2021")
         button.datepickerButton.apply ПРИМЕНИТЬ

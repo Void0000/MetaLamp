@@ -1,7 +1,10 @@
 mixin text-field-default
+    
+    - var title = "text field"
+    - var titleSecond = "default"
 
     .text-field-default
-        span.text-field-default__title.text-field-default__title--bold TEXT FIELD 
-        span.text-field-default__title DEFAULT 
+        span.text-field-default__title.text-field-default__title--bold #{title}
+        span.text-field-default__title #{titleSecond} 
         form.text-field-default__form
             input.text-field-default__input(type="email" name="Email" placeholder="Email" maxlength="20" )

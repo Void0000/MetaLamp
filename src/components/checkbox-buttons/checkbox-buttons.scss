@@ -8,106 +8,71 @@ $checkbox-width: 20px;
     &__title {
 
         &--bold {
+          text-transform: uppercase;
             @include h3;
-            margin-left: 0;
             font-weight: bold;
         }
-
-    &__form-checkbox {
-
-       
-            margin-top: 15rem;
-      
-    }
-        
     }
 
-    .checkbox-buttons__form {
-        margin-top: 0.64rem;
-    }
-
-
-// Checkboxes
-input[type="checkbox"] {
-  position: absolute;
-  left: -9999px;
-
-
-  & + label {
-    @include body;
-    font-size: 0.8rem;
-    position: relative;
-    display: inline-block;
-    padding: 6px 10px 6px ($checkbox-width + 12);
-    cursor: pointer;
-    margin-top: 0.2rem;
-
-    // Default State
-    &:before {
+   
+    
+    &__container {
+      width: 12rem;
       display: block;
-      content: "";
+      position: relative;
+      padding-top: 1rem;
+      padding-left: 2rem;
+      cursor: pointer;  
+      font-size: 0.8rem;    
+    }
+    
+    /* Hide the browser's default checkbox */
+    &__container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+    
+    /* Create a custom checkbox */
+    &__checkmark {
       position: absolute;
       left: 0;
-      top: 50%;
-      margin: (-$checkbox-width/2) 0 0;
-      width: $checkbox-width;
-      height: $checkbox-width;
-      background: none;
-      border: 1px solid $darkshade25;
-      border-radius: 4px;
+      height: 1.2rem;
+      width: 1.2rem;
+      top: 1rem;
+      border: 1px solid $darkshade50;
+      border-radius: 5px;
     }
-  }
-
-  & + label[for='checkbox3'] {
-      margin-top: -0.55rem; 
-      padding-top: 1rem;
-      
-
-      
-  }
-
-  // Checked State
-  &:checked + label {
-    &:before {
-        background: none;
-        font-family: 'material icons';
-        content: 'done';
-        color: $purple;
-        position: absolute;
-        border-color: $purple;
-        padding: 0.11rem;
+    
+    /* When the checkbox is checked, add a blue background */
+    &__container input:checked ~ &__checkmark {
+      border-color: $purple;
     }
-  }
-
-
+    
+    /* Create the checkmark/indicator (hidden when not checked) */
+    &__checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    
+    /* Show the checkmark when checked */
+    &__container input:checked ~ &__checkmark:after {
+      display: block;
+    }
+    
+    /* Style the checkmark/indicator */
+    &__container &__checkmark:after {
+      font-family: 'material icons';
+      content: 'done';
+      font-size: 0.7rem;
+      color: $purple;
+      top: 0.25rem;
+      left: 0.25rem;
+    }
 
  
 
-  // Disabled State
-//   &:disabled {
-//     & + label {
-//       cursor: not-allowed;
-
-//       &:before {
-//         background: salmon;
-//       }
-//     }
-
-//     // Disabled Checked
-//     &:checked + label {
-//       &:before {
-//         background: salmon;
-//       }
-//     }
-//   }
-// }
-
-// Extra layout styling
-
-.form-checkbox{
-  position: relative;
-  display: block;
-   
-}
-
-}}
+  }

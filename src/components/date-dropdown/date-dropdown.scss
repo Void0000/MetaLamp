@@ -14,45 +14,53 @@
         }
         &--boldSecond {
             @include h3;
-            margin-left: 3.2rem;
+            margin-left: 3.5rem;
             font-weight: bold;
         }
     }
     
 }
 
+.one {
+    position: relative;
+}
+
 .datepicker {
     margin-top: 30.9rem;
+    
 }
 
 #start_one, #end_one {
+    cursor: pointer;
     margin-top: 0.1rem;
     @include field;
-    width: 9.4rem;
+    width: 7.5rem;
 }
 
 #end_one {
-    margin-left: 1.25rem;
+    margin-left: 1.4rem;
 }
 
 .one::after {
-   position: absolute;
-    font-family: "material icons";
+    cursor: pointer;
+    position: absolute;
+    font-family: 'material icons';
     content: 'expand_more';
     color: $darkshade50;
     font-size: 1.3rem;
-    margin-left: -2.1rem;
-    margin-top: 0.85rem;
+    left: 18rem;
+    top: 0.85rem;
 }
 
 .one::before {
+    cursor: pointer;
     position: absolute;
-    font-family: "material icons";
+    font-family: 'material icons';
     content: 'expand_more';
     color: $darkshade50;
     font-size: 1.3rem;
-    margin-left: 7.3rem;
-    margin-top: 0.85rem;
+    left: 7.3rem;
+    top: 0.85rem;
 }
 
 #start_one::placeholder,

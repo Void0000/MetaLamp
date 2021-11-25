@@ -11,7 +11,7 @@ jQuery(function($){
         ellipsePageSet: true,
         cssStyle: 'light-theme',
         prevText:'',
-        nextText:'`'
+        nextText:'arrow_forward'
     });
 });
 

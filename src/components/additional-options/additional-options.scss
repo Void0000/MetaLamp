@@ -1,0 +1,48 @@
+@import '../../assets/mixinsAndMixes.scss';
+
+.additional-options {
+width: 17.4rem;
+
+   &__comfort,
+   &__convenience {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1.45rem ;
+    padding-left: 0.05rem;
+    border-bottom: 1px solid $darkshade5;           
+   }
+
+   &__span-comfort-image {
+    padding: 0.8rem 1.35rem;
+    background: url('../../assets/images/insert_emoticon.jpg') no-repeat center;
+}
+
+&__comfort-text,
+&__convenience-text{
+    display: flex;
+    flex-direction: column;
+    gap: 0.51rem;
+    @include body;
+    font-size: 0.85rem;
+    margin-left: 0.8rem;
+    margin-top: 0.05rem;
+}
+
+&__span-comfort-text--bold,
+&__span-convenience-text--bold {
+    font-weight: bold;
+}
+
+&__convenience {
+    margin-top: 1.4rem;
+}
+
+&__span-convenience-image {
+    padding: 0.8rem 1.35rem;
+    background: url('../../assets/images/location_city.jpg') no-repeat center;
+}
+
+&__convenience-text{
+    margin-top: 0.1rem;
+}
+}

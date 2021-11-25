@@ -16,8 +16,7 @@ include ../../../components/buttons/buttons
 include ../../../components/pagination/pagination
 include ../../../components/dropdown-rooms/dropdown-rooms
 include ../../../components/expandable-checkbox-list/expandable-checkbox-list
-include ../../../components/expandable-checkbox-list-expand/expandable-checkbox-list-expand
-
+include ../../../components/additional-options/additional-options
 
 
 block main
@@ -39,12 +38,10 @@ block main
                 +subscription-text-field
             .form-elements__elem--marginTopDouble
                 +dropdown-rooms
-            .form-elements__elem--marginTop
-                +dropdown-rooms--expanded
             .form-elements__elem--marginTopDouble
                 +expandable-checkbox-list
-            .form-elements__elem--marginTopExtra
-                +expandable-checkbox-list-expand
+            .form-elements__elem--marginTopDouble
+                +additional-options
         .form-elements__cell--secondColumn 
             .form-elements__elem
                 +checkbox-buttons

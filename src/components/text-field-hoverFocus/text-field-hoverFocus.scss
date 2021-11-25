@@ -5,6 +5,7 @@
     @include body;
 
     &__title {
+        text-transform: uppercase;
         margin-left: 9.8rem;
 
         &--bold {
@@ -16,6 +17,7 @@
     }
 
     &__input {
+        
         margin-top: 0.3rem;
         @include field;
         color: $darkshade75

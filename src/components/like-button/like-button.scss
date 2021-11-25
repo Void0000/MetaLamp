@@ -7,6 +7,7 @@
     &__title {
       
         &--bold {
+            text-transform: uppercase;
             @include h3;
             margin-left: 0;
             font-weight: bold;
@@ -14,61 +15,51 @@
     }
     
     &__form {
-      margin-top: 1rem;
+      margin-top: 0.95rem;
     } 
-  
-  }
 
-.like, .dislike {
+    &__dislike {
+      cursor: pointer;
+      @include body;
+      font-size: 0.6rem;
+      background:url('../../assets/images/Group 3.jpg') no-repeat center;
+      border: none;
+      height: 1.25rem;
+      width: 2.5rem;
+      text-align: end;
+    }
 
-  padding: 0.44%;
-  width: 5.9%;
-  border-radius: 45px;
-  border: 1px solid $darkshade25;
-  background: none;
-  @include body;
-  font-size: 0.6rem;
-  cursor: pointer;
-  
-}
+    &__dislike--liked {
+      background:url('../../assets/images/Group 4.jpg') no-repeat center;
+     }
 
-.like:hover, :focus, :active
-.dislike:hover, :focus, :active {
+    &__like-span {
+    margin-left: 0.68rem;
+    }
 
- opacity: 1;
-  
-}
+    &__like {
+      cursor: pointer;
+      @include body;
+      color: $purple;
+      font-size: 0.6rem;
+      background:url('../../assets/images/Group 4.jpg') no-repeat center;
+      border: none;
+      height: 1.25rem;
+      width: 2.5rem;
+      text-align: end;
+      }        
+         
+      &__like--disliked {
+      background:url('../../assets/images/Group 3.jpg') no-repeat center;
+      } 
 
-.dislike {
-  margin: 0 0 0 1.5%;
-}
-
-.likes, 
-.dislikes {
-  margin: 0 0 0 25%;
-}
-
-.dislikes {
-  margin: 0 0 0 15%;
-}
-
-.active {
-  border-color: $purple;
-  color: $purple;
-}
-
-.material-icons-outlined {
-  font-family: "material icons";
-  margin: 0 0 0 -20%;
-  font-size: 0.6rem;
-}
-
-.secondIcon {
-  font-family: "material icons";
-  margin: 0 0 0 -12%;
-}
-
-
+      &__dislike:focus,
+      &__like:focus {
+        opacity: 1;
+      }
+    
+    }
 
     
 
+  

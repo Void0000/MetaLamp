@@ -1,133 +1,113 @@
 @import '../../assets/mixinsAndMixes.scss';
-$checkbox-width: 20px;
+.expandable_checkbox_list {
+    
+    position: relative;
+    @include body;  
 
-.expandable-checkbox-list   {
-   
+    &__details {
+        width: 16rem;
+    }
 
-    margin-top: 10.9rem;
-    @include body;
-    &__title {
-            cursor: pointer;
+    &__summary {
+        cursor: pointer;
+        position: relative;
+        list-style: none;  
+        opacity: 1;
+        text-transform: uppercase;
+        @include h3;
+        font-weight: bold;
+        letter-spacing: 0.025rem;
 
-        &--bold {
-            @include h3;
-            margin-left: 0;
-            font-weight: bold;
-        }
-
-        &--comment{
-            margin-left: 8.2rem
-        }
-
-
-        &::after {
-            padding-left: 3rem;
-            margin-top: -0.2rem;
-            font-weight: normal;
-            margin-left: 0rem;
-            font-size: 1.3rem;
-            color: $darkshade50;
-            position: absolute;
+         &::after {
             font-family: 'material icons';
             content: 'expand_more';
-        }
-    }
-
-    &__title--expandLess::after {
-        padding-left: 3rem;
-            margin-top: -0.2rem;
-            font-weight: normal;
-            margin-left: 0rem;
-            font-size: 1.3rem;
+            position: absolute;
+            text-transform: none;
+            font-size: 1.35rem;
+            left: 14.561rem;
+            top: -0.2rem;
             color: $darkshade50;
-            position: absolute;
-            font-family: 'material icons';
-            content: 'expand_less';
-    }
+            font-weight: normal;
+      }      
 
-}
+    }        
 
-
-
-
-.form-checkbox {
-    margin-top: 0.6rem;
-    margin-bottom: -0.6rem;
-    padding-bottom: 0rem;
-}
-    input[name='expandable'] {
-        margin-top: 5rem;
-        display: none;
-        left: -9999px;
-      
-      
-        & + label {
-          @include body;
-          font-size: 0.8rem;
-          position: relative;
-          display: inline-block;
-          padding: 6px 10px 6px ($checkbox-width + 12);
-          cursor: pointer;
-          margin-top: 0.2rem;
-      
-          // Default State
-          &:before {
-            display: block;
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 50%;
-            margin: (-$checkbox-width/2) 0 0;
-            width: $checkbox-width;
-            height: $checkbox-width;
-            background: none;
-            border: 1px solid $darkshade25;
-            border-radius: 4px;
-          }
-        }
-      
-        & + label[for='checkbox3'] {
-            margin-top: -0.55rem; 
-            padding-top: 1rem;
-            
-      
-            
-        }
-      
-        // Checked State
-        &:checked + label {
-          &:before {
-              background: none;
-              font-family: 'material icons';
-              content: 'done';
-              color: $purple;
-              position: absolute;
-              border-color: $purple;
-              padding: 0.11rem;
-          }
-        }
-      
-
-
-
-    }
-
-    
-    .expandable-checkbox-list__forms--hidden {
-        
-        opacity: 0;
-        height: 0;
-        overflow: hidden
-    }
-
-    .expandable-checkbox-list__forms--visible {
-        background: white;
+    &__details[open] summary::after {
+      font-family: 'material icons';
+      content: 'expand_less';
+      position: absolute;
+      text-transform: none;
+      font-size: 1.35rem;
+      left: 14.561rem;
+      top: -0.2rem;
+      color: $darkshade50;
+      font-weight: normal;
+  }
+  
+    &__form {
+        width: 16rem;
         position: absolute;
-        transition: all 0.2s;
-        z-index: 100;
-        opacity: 1;
-        height: 12.2rem;
-        
+        background: white;
+        margin-top: 1.15rem;
     }
-
+  
+    &__container {
+        width: max-content;
+        display: flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;  
+        margin-bottom: 0.75rem;
+        padding: 0.1rem 1.94rem;
+        padding-right: 0;
+        @include body;
+        font-size: 0.8rem;
+        letter-spacing: 0.05rem;
+    }
     
+    /* Hide the browser's default checkbox */
+    &__container input {
+      position: absolute;
+      opacity: 0;
+      height: 0;
+      width: 0;
+    }
+    
+    /* Create a custom checkbox */
+    &__checkmark {
+      position: absolute;
+      top: -0.05rem;
+      left:0;
+      height: 1.15rem;
+      width: 1.15rem;
+      border: 1px solid $darkshade50;
+      border-radius: 5px;
+    }
+    
+    /* When the checkbox is checked, add a blue background */
+    &__container input:checked ~ &__checkmark {
+      border-color: $purple;
+    }
+    
+    /* Create the checkmark/indicator (hidden when not checked) */
+    &__checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    
+    /* Show the checkmark when checked */
+    &__container input:checked ~ &__checkmark:after {
+      display: block;
+    }
+    
+    /* Style the checkmark/indicator */
+    &__container &__checkmark:after {
+      font-family: 'material icons';
+      content: 'done';
+      font-size: 0.7rem;
+      color: $purple;
+      top: 0.25rem;
+      left: 0.25rem;
+    }
+  }

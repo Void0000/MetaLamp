@@ -1,16 +1,11 @@
 mixin like-button
+
+    -var title = "like button"
    
     .like-button
-        span.like-button__title.like-button__title--bold LIKE BUTTON
+        span.like-button__title.like-button__title--bold #{title}
         form.like-button__form
-            #rating
-                button.like(type='button' ) 
-                    span.material-icons-outlined.firstIcon favorite_border
-                    span.likes 2
-                button.dislike.active(type='button' ) 
-                    span.material-icons-outlined.secondIcon favorite
-                    span.dislikes 12
-
-
-
-            
+            button.like-button__dislike.js-like-button__dislike 2
+            span.like-button__like-span
+            button.like-button__like.js-like-button__like 12
+          

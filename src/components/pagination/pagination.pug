@@ -1,10 +1,12 @@
 mixin pagination
-   
+    - var title = "pagination"
+    - var titleRentVariation = "1 – 12 из 100+ вариантов аренды"
+
     .pagination
-        span.pagination__title.pagination__title--bold PAGINATION
+        span.pagination__title.pagination__title--bold #{title}
         form.pagination__form
             .pages
-            .variables-arend 1 – 12 из 100+ вариантов аренды
+            .pagination__variables-rent #{titleRentVariation}
           
 
 

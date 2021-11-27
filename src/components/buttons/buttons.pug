@@ -1,22 +1,26 @@
-mixin buttons
-            -var title = "buttons"
+mixin buttons(params)
+   
+           
             -var buttonText = "click me"
             -var payButtonText = "перейти к оплате"
 
-            .buttons
-                span.buttons__title.buttons__title--bold #{title}
-                form.buttons__form
-                    button(type="button").buttons__fill-button #{buttonText}
-                    button(type="button").buttons__fill-button.buttons__fill-button-second #{buttonText}
-                form.buttons__form
-                    button(type="button").buttons__counter-button 
-                    button(type="button").buttons__counter-button.buttons__counter-button-second 
-                form.buttons__form
-                    button(type="button").buttons__no-border-button #{buttonText}
-                    button(type="button").buttons__no-border-button.buttons__no-border-button-second #{buttonText}
-                form.buttons__form
-                    button(type="button").buttons__pay-button #{payButtonText}
-                     
+            if (params.title)
+                span.buttons__title--bold= params.title
+
+                .buttons
+                    span.buttons__title.buttons__title--bold 
+                    form.buttons__form
+                        button(type="button").buttons__fill-button #{buttonText}
+                        button(type="button").buttons__fill-button.buttons__fill-button-second #{buttonText}
+                    form.buttons__form
+                        button(type="button").buttons__counter-button 
+                        button(type="button").buttons__counter-button.buttons__counter-button-second 
+                    form.buttons__form
+                        button(type="button").buttons__no-border-button #{buttonText}
+                        button(type="button").buttons__no-border-button.buttons__no-border-button-second #{buttonText}
+                    form.buttons__form
+                        button(type="button").buttons__pay-button #{payButtonText}
+                        
 
                   
 

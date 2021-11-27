@@ -1,9 +1,13 @@
-mixin toggle
+mixin toggle(params)
+   
+   
+    if (params.title)
+        span.toggle__title.toggle__title--bold= params.title
 
-    -var title = "toggle"
+    
    
     .toggle
-        span.toggle__title.toggle__title--bold #{title}
+        span.toggle__title.toggle__title--bold 
         form.toggle__form
             input#switch(type="checkbox" name="switch"  checked="checked")
             label(for="switch")

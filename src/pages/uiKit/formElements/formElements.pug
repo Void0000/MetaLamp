@@ -17,49 +17,83 @@ include ../../../components/pagination/pagination
 include ../../../components/dropdown-rooms/dropdown-rooms
 include ../../../components/expandable-checkbox-list/expandable-checkbox-list
 include ../../../components/additional-options/additional-options
+include ../../../components/rich-checkbox-buttons/rich-checkbox-buttons
+include ../../../components/bullet-list/bullet-list
+include ../../../components/reviews/reviews
 
 
 block main
+
     .form-elements
-        .form-elements__cell--firstColumn 
+
+        .form-elements__cell 
+
             .form-elements__elem
-                +text-field-default
-            .form-elements__elem--marginTop
-                +text-field-hoverFocus 
-            .form-elements__elem--marginTop
-                +dropdown-guests  
-            .form-elements__elem--marginTop
-                +masked-text-field
-            .form-elements__elem--marginTopExtra
-                +date-dropdown
-            .form-elements__elem--marginTopExtra
-                +filter-date-dropdown
-            .form-elements__elem--marginTopExtra
-                +subscription-text-field
-            .form-elements__elem--marginTopDouble
-                +dropdown-rooms
-            .form-elements__elem--marginTopDouble
-                +expandable-checkbox-list
-            .form-elements__elem--marginTopDouble
-                +additional-options
-        .form-elements__cell--secondColumn 
+                +text-field-default({title: "text field", titleSecond: "default"})
+            .form-elements__elem.form-elements__elem--margined            
+                +text-field-hoverFocus({title: "text field", titleSecond: "hover/focus"})
+            .form-elements__elem.form-elements__elem--margined            
+                +dropdown-guests({title: "dropdown"}) 
+            .form-elements__elem.form-elements__elem--margined            
+                +masked-text-field({title: "masked text field"})
+            .form-elements__elem.form-elements__elem--margined
+                +date-dropdown({title: "date dropdown", titleSecond: "date dropdown"})
+            .form-elements__elem.form-elements__elem--margined
+                +filter-date-dropdown({title: "filter date dropdown"})
+            .form-elements__elem.form-elements__elem--margined
+                +subscription-text-field({title: "subscription text field"})
+                
+        .form-elements__cell
+
             .form-elements__elem
-                +checkbox-buttons
-            .form-elements__elem--marginTopExtra
-                +radio-buttons        
-            .form-elements__elem--marginTopExtra
-                +toggle   
-            .form-elements__elem--marginTopExtra
-                +like-button    
-            .form-elements__elem--marginTopExtra
-                +rate-button 
-        .form-elements__cell--thirdColumn 
+                +checkbox-buttons({title: "checkbox buttons"})
+            .form-elements__elem.form-elements__elem--margined
+                +radio-buttons({title: "radio buttons"})        
+            .form-elements__elem.form-elements__elem--margined
+                +toggle({title: "toggle"})  
+            .form-elements__elem.form-elements__elem--margined
+                +like-button({title: "like button"})    
+            .form-elements__elem.form-elements__elem--margined
+                +rate-button({title: "rate button"})
+
+        .form-elements__cell 
+
             .form-elements__elem
-                +range-slider
-            .form-elements__elem--marginTopExtra
-                +buttons
-            .form-elements__elem--marginTopExtra
-                +pagination
+                +range-slider({title: "range-slider"})
+            .form-elements__elem.form-elements__elem--margined
+                +buttons({title: "buttons"})
+            .form-elements__elem.form-elements__elem--margined
+                +pagination({title: "pagination", titleRentVariation: "1 – 12 из 100+ вариантов аренды"})
+      
+        .form-elements__cell
+
+            .form-elements__elem.form-elements__elem--margined
+                +dropdown-rooms({title: "dropdown"})
+            .form-elements__elem.form-elements__elem--margined
+                +expandable-checkbox-list({title: "expandable checkbox list"})
+            
+        .form-elements__cell
+
+            .form-elements__elem.form-elements__elem--margined
+                +rich-checkbox-buttons({title: "rich checkbox buttons"})
+               
+        .form-elements__cell
+
+            .form-elements__elem.form-elements__elem--margined
+                +bullet-list({title: "bullet list"})
+
+        .form-elements__cell
+
+            .form-elements__elem.form-elements__elem--margined
+                +additional-options(params)
+
+        .form-elements__cell
+        
+            .form-elements__elem.form-elements__elem--margined
+                +reviews(params) 
+                   
+                
+                                   
             
         
             

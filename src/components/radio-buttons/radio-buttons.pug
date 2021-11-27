@@ -1,9 +1,12 @@
-mixin radio-buttons
+mixin radio-buttons(params)
+   
+   
+    if (params.title)
+        .radio-buttons__title--bold= params.title
 
-    - var title = "radio buttons"
    
     .radio-buttons
-        span.radio-buttons__title.radio-buttons__title--bold #{title}
+        span.radio-buttons__title.radio-buttons__title--bold 
         form.radio-buttons__form
             label.radio-buttons__container Мужчина
                 input(type="radio" name="radio" checked)

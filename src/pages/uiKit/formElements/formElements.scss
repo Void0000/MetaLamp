@@ -2,34 +2,33 @@
  .form-elements {
     display: grid;
     grid-template-columns: repeat(3, 32rem);
-    column-gap: 4.6rem;
-    grid-row-gap: 1rem;
-    height: 100rem;     
+    grid-row-gap: 5rem;
+    justify-content: space-evenly;
+        @media (max-width: 1280px) {
+                grid-template-columns: repeat(2, 32rem);
+                grid-row-gap: 1rem;
+            }
+        @media (max-width: 850px) {
+        grid-template-columns: minmax(28rem, 28rem);
+            }
+
+
     &__elem {
-        &--marginTop {
-            margin-top: 1.35rem;
+        &--margined {
+            margin-top: 2rem;
         }
-        &--marginTopExtra {
-            margin-top: 2.5rem;
-        }
-        &--marginTopDouble
-        {
-            margin-top: 6.5rem;
-        }
+        
        
     }
     &__cell {
-        &--firstColumn {
-            margin-left: 8.8rem;
+        &:last-child {
+           grid-column: 2 / 4;
+                    @media (max-width: 1280px) {
+                    grid-column: auto;
             }
-        &--secondColumn {
-            margin-left: 0rem;
-            }
-        &--thirdColumn {
-            margin-left: -12rem;
-            }
-        
+        }
     }
-    
+ 
     
 }
+    

@@ -1,11 +1,13 @@
-mixin like-button
+mixin like-button(params)
+   
+   
+    if (params.title)
+        span.like-button__title--bold= params.title
 
-    -var title = "like button"
+
    
     .like-button
-        span.like-button__title.like-button__title--bold #{title}
+        span.like-button__title.like-button__title--bold 
         form.like-button__form
-            button.like-button__dislike.js-like-button__dislike 2
-            span.like-button__like-span
-            button.like-button__like.js-like-button__like 12
+            button(type="button").like-button__like.js-like-button__like 12
           

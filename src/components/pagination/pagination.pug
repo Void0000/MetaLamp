@@ -1,12 +1,19 @@
-mixin pagination
-    - var title = "pagination"
-    - var titleRentVariation = "1 – 12 из 100+ вариантов аренды"
+mixin pagination(params)
+   
+   
+    if (params.title)
+        span.pagination__title--bold= params.title
+    
+
+ 
 
     .pagination
-        span.pagination__title.pagination__title--bold #{title}
+        span.pagination__title.pagination__title--bold 
         form.pagination__form
             .pages
-            .pagination__variables-rent #{titleRentVariation}
+            if (params.titleRentVariation)
+                .pagination__variables-rent= params.titleRentVariation
+            .pagination__variables-rent 
           
 
 

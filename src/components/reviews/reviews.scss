@@ -1,0 +1,60 @@
+@import '../../assets/mixinsAndMixes.scss';
+
+.reviews {
+    
+    @include body;
+    &__image {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__span-image{
+        background: url('../../assets/images/image.jpg') no-repeat center;
+        padding: 1.5rem 2rem;
+    }
+    
+    &__name {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.6rem ;
+    }
+
+    &__span-name {
+        margin-top: 0.1rem;
+        @include h3;
+        font-size: 0.85rem;
+        color: $darkshade75;
+    }
+
+    &__span-time {
+        letter-spacing: 0.05rem;
+        font-size: 0.8rem;
+    }
+     
+
+    &__like{
+       margin-top: 0.6rem;
+       margin-left: 0.7rem;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    &__span-text {
+        margin-top: 0.7rem;
+        font-size: 0.8rem;
+        letter-spacing: 0.045rem;
+        line-height: 1.4rem;
+        width: 41rem;
+
+    }
+
+      
+
+}
+
+
+

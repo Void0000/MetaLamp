@@ -1,7 +1,6 @@
 @import '../../assets/mixinsAndMixes.scss';
 
 .pagination {
-  margin-top: 2.68rem;
     @include body;
     
     &__title {
@@ -12,7 +11,7 @@
             font-weight: bold;
         }
     } 
-  
+   
 
 }
 
@@ -55,7 +54,7 @@ color: $darkshade50;
 .page-link.next {
   position: absolute;
   top: 0.31rem;
-  left: -0.2rem;
+  left: -0.206rem;
   color: white;
   font-family: 'material icons';
   font-size: 1.3rem;

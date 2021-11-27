@@ -1,10 +1,13 @@
-mixin dropdown-guests   
+mixin dropdown-guests(params)
+   
+   
+    if (params.title)
+        span.dropdown-guests__title--bold= params.title   
 
-    - var title = "DROPDOWN"
   
        
     .dropdown-guests
-        span.dropdown-guests__title.dropdown-guests__title--bold #{title}
+        span.dropdown-guests__title.dropdown-guests__title--bold
         form.dropdown-guests__form  
             input.dropdown-guests__input.dropdown-guests__input-js-open(text readonly)
             .dropdown-guests__menu

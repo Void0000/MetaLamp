@@ -7,6 +7,7 @@
         &__title {
             
             &--bold {
+                text-transform: uppercase;
                 @include h3;
                 margin-left: 0;
                 font-weight: bold;

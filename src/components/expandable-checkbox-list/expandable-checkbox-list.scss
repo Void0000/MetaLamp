@@ -18,7 +18,7 @@
         font-weight: bold;
         letter-spacing: 0.025rem;
 
-         &::after {
+        &::after {
             font-family: 'material icons';
             content: 'expand_more';
             position: absolute;
@@ -42,10 +42,10 @@
       top: -0.2rem;
       color: $darkshade50;
       font-weight: normal;
+
   }
   
     &__form {
-        width: 16rem;
         position: absolute;
         background: white;
         margin-top: 1.15rem;
@@ -63,6 +63,8 @@
         @include body;
         font-size: 0.8rem;
         letter-spacing: 0.05rem;
+       text-transform: capitalize;
+
     }
     
     /* Hide the browser's default checkbox */
@@ -109,5 +111,7 @@
       color: $purple;
       top: 0.25rem;
       left: 0.25rem;
+      text-transform: lowercase;
+
     }
   }

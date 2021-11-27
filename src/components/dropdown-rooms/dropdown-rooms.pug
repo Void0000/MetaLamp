@@ -1,35 +1,39 @@
-mixin dropdown-rooms
+mixin dropdown-rooms(params)
        
-    - var title = "DROPDOWN"
+
+    if (params.title)
+        span.like-button__title--bold= params.title
+
+    
   
        
-    .dropdown-rooms
-        span.dropdown-rooms__title.dropdown-rooms__title--bold #{title}
-        form.dropdown-rooms__form  
-            input.dropdown-rooms__input.dropdown-rooms__input-js-open(text readonly)
-            .dropdown-rooms__menu
-                .dropdown-rooms__adults спальни
-        
-                button(type='button').dropdown-rooms__adults-button-decrease 
-                  
-                span.dropdown-rooms__adults-count 0
-                  
-                button(type='button').dropdown-rooms__adults-button-increase 
-                 
-                .dropdown-rooms__children кровати
-        
-                button(type='button').dropdown-rooms__children-button-decrease 
-                  
-                span.dropdown-rooms__children-count 0
-                  
-                button(type='button').dropdown-rooms__children-button-increase 
+        .dropdown-rooms
+            span.dropdown-rooms__title.dropdown-rooms__title--bold #{title}
+            form.dropdown-rooms__form  
+                input.dropdown-rooms__input.dropdown-rooms__input-js-open(text readonly)
+                .dropdown-rooms__menu
+                    .dropdown-rooms__adults спальни
+            
+                    button(type='button').dropdown-rooms__adults-button-decrease 
+                    
+                    span.dropdown-rooms__adults-count 0
+                    
+                    button(type='button').dropdown-rooms__adults-button-increase 
+                    
+                    .dropdown-rooms__children кровати
+            
+                    button(type='button').dropdown-rooms__children-button-decrease 
+                    
+                    span.dropdown-rooms__children-count 0
+                    
+                    button(type='button').dropdown-rooms__children-button-increase 
 
-                .dropdown-rooms__infant ванные комнаты
-        
-                button(type='button').dropdown-rooms__infant-button-decrease 
-                  
-                span.dropdown-rooms__infant-count 0
-                  
-                button(type='button').dropdown-rooms__infant-button-increase 
+                    .dropdown-rooms__infant ванные комнаты
+            
+                    button(type='button').dropdown-rooms__infant-button-decrease 
+                    
+                    span.dropdown-rooms__infant-count 0
+                    
+                    button(type='button').dropdown-rooms__infant-button-increase 
 
 

@@ -1,9 +1,13 @@
-mixin subscription-text-field
-
-    - var title = "subscription text field"
+mixin subscription-text-field(params)
+   
+   
+   
     
     .subscription-text-field
-        span.subscription-text-field__title.subscription-text-field__title--bold #{title}
+        if (params.title)
+            span.subscription-text-field__title--bold= params.title
+
+        span.subscription-text-field__title.subscription-text-field__title--bold
         form.subscription-text-field__form
             input.subscription-text-field__input(type="email" name="Email" placeholder="Email" maxlength="20" )
             button.subscription-text-field__button

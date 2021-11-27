@@ -19,4 +19,6 @@ import '../../../components/pagination/pagination';
 import '../../../components/dropdown-rooms/dropdown-rooms';
 import '../../../components/expandable-checkbox-list/expandable-checkbox-list';
 import '../../../components/additional-options/additional-options';
-
+import '../../../components/rich-checkbox-buttons/rich-checkbox-buttons';
+import '../../../components/bullet-list/bullet-list';
+import '../../../components/reviews/reviews';

@@ -1,9 +1,13 @@
-mixin rate-button
+mixin rate-button(params)
+   
+   
+    
 
-    -var title = "rate button"
    
     .rate-button
-        span.rate-button__title.rate-button__title--bold #{title}
+        if (params.title)
+                span.rate-button__title--bold= params.title
+        span.rate-button__title.rate-button__title--bold 
         form.rate-button__form
                 input#rating-5(type='radio' name='rating')
                 label(for='rating-5')

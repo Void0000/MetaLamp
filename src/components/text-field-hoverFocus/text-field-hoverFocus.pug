@@ -1,10 +1,17 @@
-mixin text-field-hoverFocus
+mixin text-field-hoverFocus(params)
 
-    - var title = "text field"  
-    - var titleSecond = "hover/focus"
+    
+
+    
+
+  
 
     .text-field-hoverFocus
-        span.text-field-hoverFocus__title.text-field-hoverFocus__title--bold #{title}
-        span.text-field-hoverFocus__title #{titleSecond} 
+        if (params.title)
+            span.text-field-hoverFocus__title--bold= params.title
+        span.text-field-hoverFocus__title.text-field-hoverFocus__title--bold
+        if (params.titleSecond)
+            span.text-field-hoverFocus__title= params.titleSecond
+        span.text-field-hoverFocus__title 
         form.text-field-hoverFocus__form
             input.text-field-hoverFocus__input(type="email"  placeholder="This is pretty awesome" maxlength="20" )

@@ -1,7 +1,6 @@
 @import '../../assets/mixinsAndMixes.scss';
 
 .like-button {
-  margin-top: 3rem;
     @include body;
     
     &__title {
@@ -14,9 +13,7 @@
         }
     }
     
-    &__form {
-      margin-top: 0.95rem;
-    } 
+    
 
     &__dislike {
       cursor: pointer;
@@ -33,9 +30,7 @@
       background:url('../../assets/images/Group 4.jpg') no-repeat center;
      }
 
-    &__like-span {
-    margin-left: 0.68rem;
-    }
+    
 
     &__like {
       cursor: pointer;

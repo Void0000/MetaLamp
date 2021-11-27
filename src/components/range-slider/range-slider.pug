@@ -1,8 +1,12 @@
-mixin range-slider
-            -var title = "range-slider"
+mixin range-slider(params)
+                 
 
             .range-slider
-                span.range-slider__title.range-slider__title--bold #{title}
+            
+                if (params.title)
+                    span.range-slider__title--bold= params.title
+
+                span.range-slider__title.range-slider__title--bold 
                 span.range-slider__lower-value 
                 span.range-slider__dash -
                 span.range-slider__upper-value

@@ -1,9 +1,14 @@
-mixin masked-text-field
+mixin masked-text-field(params)
+   
+   
+    if (params.title)
+        span.masked-text-field__title--bold= params.title
 
-    - var title = "masked text field"
+
+    - var title = ""
 
    
     .masked-text-field
-        span.masked-text-field__title.masked-text-field__title--bold  #{title}
+        span.masked-text-field__title.masked-text-field__title--bold 
         form.masked-text-field__form
             input.masked-text-field__input(type="text"  name="masked-text-field")

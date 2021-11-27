@@ -8,11 +8,12 @@
     &__title {
         
         &--bold {
+            text-transform: uppercase;
             @include h3;
-            margin-left: 0;
             font-weight: bold;
         }
         &--boldSecond {
+            text-transform: uppercase;
             @include h3;
             margin-left: 3.5rem;
             font-weight: bold;
@@ -50,6 +51,7 @@
     font-size: 1.3rem;
     left: 18rem;
     top: 0.85rem;
+    text-transform: lowercase;
 }
 
 .one::before {
@@ -61,6 +63,8 @@
     font-size: 1.3rem;
     left: 7.3rem;
     top: 0.85rem;
+    text-transform: lowercase;
+
 }
 
 #start_one::placeholder,

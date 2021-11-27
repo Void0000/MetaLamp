@@ -5,13 +5,13 @@
     @include body;
 
     &__title {
-       text-transform: uppercase;
-        
+
         margin-left: 12rem;
 
         &--bold {
+            text-transform: uppercase;
+
             @include h3;
-            margin-left: 0;
             font-weight: bold;
         }
         

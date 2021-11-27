@@ -1,9 +1,11 @@
-mixin checkbox-buttons
+mixin checkbox-buttons(params)
 
-    - var title = "checkbox buttons"
+ 
+    if (params.title)
+        span.like-button__title--bold= params.title
     
     .checkbox-buttons
-        span.checkbox-buttons__title.checkbox-buttons__title--bold #{title}
+        span.checkbox-buttons__title.checkbox-buttons__title--bold 
         form.checkbox-buttons__form 
             label.checkbox-buttons__container Можно курить
                 input.checkbox-buttons__input(type="checkbox" checked)

@@ -1,10 +1,9 @@
 import './formElements.scss'
 
 
-import '../../../components/text-field-default/text-field-default';
-import '../../../components/text-field-hoverFocus/text-field-hoverFocus';
-import '../../../components/dropdown-guests/dropdown-guests';
-import '../../../components/masked-text-field/masked-text-field';
+import '../../../components/input-container/input-container';
+import '../../../components/text-field/text-field';
+import '../../../components/dropdown/dropdown';
 import '../../../components/date-dropdown/date-dropdown';
 import '../../../components/filter-date-dropdown/filter-date-dropdown';
 import '../../../components/subscription-text-field/subscription-text-field';
@@ -17,8 +16,6 @@ import '../../../components/range-slider/range-slider';
 import '../../../components/buttons/buttons';
 import '../../../components/pagination/pagination';
 import '../../../components/dropdown-rooms/dropdown-rooms';
-import '../../../components/expandable-checkbox-list/expandable-checkbox-list';
 import '../../../components/additional-options/additional-options';
-import '../../../components/rich-checkbox-buttons/rich-checkbox-buttons';
 import '../../../components/bullet-list/bullet-list';
 import '../../../components/reviews/reviews';

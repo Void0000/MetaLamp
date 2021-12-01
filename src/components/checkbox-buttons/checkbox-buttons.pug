@@ -1,18 +1,47 @@
 mixin checkbox-buttons(params)
-
- 
-    if (params.title)
-        span.like-button__title--bold= params.title
     
-    .checkbox-buttons
-        span.checkbox-buttons__title.checkbox-buttons__title--bold 
+    - let {positions} = params
+    - let {title} = params
+    - let {checkboxType} = params
+
+    - let checkboxListClass = ['checkbox-buttons']
+    - let checkboxExpandableClass = ['expandable_checkbox_list']
+    - let richCheckboxClass = ['rich_checkbox_list']
+
+    case params.checkboxType
+        when checkboxType= "checkboxList"
+            - checkboxListClass.push(checkboxListClass +'--visible') 
+
+        when checkboxType= "checkboxExpandableList"
+            - checkboxExpandableClass.push(checkboxExpandableClass +'--visible')
+
+        when checkboxType= "richCheckboxButtons"
+            - richCheckboxClass.push(richCheckboxClass +'--visible')
+    
+    div(class = checkboxListClass)
+        span.checkbox-buttons__title.checkbox-buttons__title--bold #{title}
         form.checkbox-buttons__form 
-            label.checkbox-buttons__container Можно курить
-                input.checkbox-buttons__input(type="checkbox" checked)
+        each val in positions
+            label.checkbox-buttons__container= val.title
+                input.checkbox-buttons__input(type="checkbox" checked=val.checked)
                 span.checkbox-buttons__checkmark  
-            label.checkbox-buttons__container Можно с питомцами
-                input.checkbox-buttons__input(type="checkbox" checked) 
-                span.checkbox-buttons__checkmark 
-            label.checkbox-buttons__container Можно пригасить гостей (до 10 человек)
-                input.checkbox-buttons__input(type="checkbox") 
-                span.checkbox-buttons__checkmark
+
+    div(class = checkboxExpandableClass)
+        details.expandable_checkbox_list__details
+            summary.expandable_checkbox_list__summary 
+                span.expandable_checkbox_list__span  #{title}
+            form.expandable_checkbox_list__form 
+                each val in positions
+                    label.expandable_checkbox_list__container= val.title
+                        input.expandable_checkbox_list__input(type="checkbox" checked=val.checked)
+                        span.expandable_checkbox_list__checkmark  
+
+    div(class = richCheckboxClass)
+        span.rich_checkbox_list__title.rich_checkbox_list__title--bold #{title}
+        form.rich_checkbox_list__form 
+            each val in positions
+                label.rich_checkbox_list__container= val.title    
+                    span.rich_checkbox_list__container= val.text
+                    input.rich_checkbox_list__input(type="checkbox" checked=val.checked)
+                    span.rich_checkbox_list__checkmark  
+                                                

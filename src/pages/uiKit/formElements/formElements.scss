@@ -5,11 +5,10 @@
     grid-row-gap: 5rem;
     justify-content: space-evenly;
         @media (max-width: 1280px) {
-                grid-template-columns: repeat(2, 32rem);
-                grid-row-gap: 1rem;
+                grid-template-columns: 1;
             }
         @media (max-width: 850px) {
-        grid-template-columns: minmax(28rem, 28rem);
+        grid-template-columns: 1;
             }
 
 

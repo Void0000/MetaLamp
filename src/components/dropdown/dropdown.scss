@@ -1,0 +1,116 @@
+@import '../../assets/mixinsAndMixes.scss';
+
+.dropdown   {
+    position: relative;
+   
+    &::after {
+        font-family: 'material icons';
+        content: 'expand_more';
+        position: absolute;
+        left: 17.85rem;
+        top: 0.62rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    &__input {
+       cursor: pointer;
+    }
+   
+    &__input--opened {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-color: $darkshade75;
+    }
+
+    &__menu {
+        display: none;
+    }
+   
+    &__menu--opened{  
+        animation: slide-down 0.2s;
+        position: absolute;
+        border: 1px solid $darkshade50;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        @include h3;
+        text-transform: uppercase;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-left: 0.9rem;
+        padding-top: 0.3rem;
+        z-index: 999;
+    }
+
+    &__option {
+        justify-content: space-between;
+        display: flex;
+        width: 19rem;
+    }
+
+    &__category {
+        margin-top: 0.4rem;
+    }
+
+    &__buttons {
+        cursor: pointer;
+    }
+
+    &__button-decrease,
+    &__button-increase {
+        cursor: pointer;
+        background: none;
+        text-transform: lowercase;
+        font-weight: normal;
+        font-family: 'material icons';
+        font-size: 0.5rem;
+        border: 1px solid $darkshade25;
+        border-radius: 50%;
+        padding: 0.6rem;
+        color: $darkshade50;
+    }
+
+    &__button-increase {
+        margin-right: 0.4rem;
+    }
+
+    &__count{
+        margin-left: 0.7rem;
+        margin-right: 0.8rem;
+    }
+
+    &__apply-button{
+        cursor: pointer;
+        text-transform: uppercase;
+        background: none;
+        border: none;
+        @include h3;
+        margin-top: 0.75rem ;
+        margin-bottom: 0.7rem ;
+        color: $purple;
+    }
+
+        &--rooms {
+
+            &::after {
+                left: 14.5rem;
+            }
+        
+            .dropdown__input {
+                width: 14.8rem;
+            }
+        
+            .dropdown__option {     
+                width: 15.6rem;
+            }
+        
+            .dropdown__apply-button{
+                display: none;
+            }
+        
+        }
+}
+
+

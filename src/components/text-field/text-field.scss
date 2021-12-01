@@ -1,0 +1,27 @@
+@import '../../assets/mixinsAndMixes.scss';
+
+.text-field {
+    padding: 0;
+    border: none;
+    @include field;
+    outline:none;
+
+    &::placeholder {
+        color: $darkshade25
+    }
+
+    &:hover, 
+    &:focus  {
+        border-color: $darkshade50;
+        outline:none;
+    }    
+
+    &:hover::placeholder, 
+    &:focus::placeholder {
+        color: $darkshade50;
+    }
+
+    
+    
+}
+

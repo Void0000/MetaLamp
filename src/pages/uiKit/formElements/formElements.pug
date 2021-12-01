@@ -1,8 +1,7 @@
-include ../../../samples/uiKit/uiKit
-include ../../../components/text-field-default/text-field-default
-include ../../../components/text-field-hoverFocus/text-field-hoverFocus
-include ../../../components/dropdown-guests/dropdown-guests
-include ../../../components/masked-text-field/masked-text-field
+extends ../../../samples/uiKit/uiKit
+include ../../../components/input-container/input-container
+include ../../../components/text-field/text-field
+include ../../../components/dropdown/dropdown
 include ../../../components/date-dropdown/date-dropdown
 include ../../../components/filter-date-dropdown/filter-date-dropdown
 include ../../../components/subscription-text-field/subscription-text-field
@@ -15,9 +14,7 @@ include ../../../components/range-slider/range-slider
 include ../../../components/buttons/buttons
 include ../../../components/pagination/pagination
 include ../../../components/dropdown-rooms/dropdown-rooms
-include ../../../components/expandable-checkbox-list/expandable-checkbox-list
 include ../../../components/additional-options/additional-options
-include ../../../components/rich-checkbox-buttons/rich-checkbox-buttons
 include ../../../components/bullet-list/bullet-list
 include ../../../components/reviews/reviews
 
@@ -29,13 +26,14 @@ block main
         .form-elements__cell 
 
             .form-elements__elem
-                +text-field-default({title: "text field", titleSecond: "default"})
-            .form-elements__elem.form-elements__elem--margined            
-                +text-field-hoverFocus({title: "text field", titleSecond: "hover/focus"})
-            .form-elements__elem.form-elements__elem--margined            
-                +dropdown-guests({title: "dropdown"}) 
-            .form-elements__elem.form-elements__elem--margined            
-                +masked-text-field({title: "masked text field"})
+                +input-container({title: "text field", titleSecond: "default"})
+                    +text-field({type: "email", placeholder: "Email"})
+            .form-elements__elem.form-elements__elem--margined   
+                +input-container({title: "dropdown"})        
+                    +dropdown({dropdownType: "guests", placeholder: "Сколько гостей", items: ["взрослые" ,"дети","младенцы"], name:"dropdown-guests"})      
+            .form-elements__elem.form-elements__elem--margined 
+                +input-container({title: "masked text field"})
+                    +text-field({name: "masked-text-field", mask: "date-mask"})           
             .form-elements__elem.form-elements__elem--margined
                 +date-dropdown({title: "date dropdown", titleSecond: "date dropdown"})
             .form-elements__elem.form-elements__elem--margined
@@ -46,7 +44,10 @@ block main
         .form-elements__cell
 
             .form-elements__elem
-                +checkbox-buttons({title: "checkbox buttons"})
+                +checkbox-buttons({title: "checkbox buttons", checkboxType: "checkboxList", positions: [{title: "Можно курить", checked: false}, 
+                                                                                                        {title: "Можно с питомцами", checked: true},
+                                                                                                        {title: "Можно пригласить гостей (до 10 человек)", checked: true}]})
+                                                                                                       
             .form-elements__elem.form-elements__elem--margined
                 +radio-buttons({title: "radio buttons"})        
             .form-elements__elem.form-elements__elem--margined
@@ -68,14 +69,23 @@ block main
         .form-elements__cell
 
             .form-elements__elem.form-elements__elem--margined
-                +dropdown-rooms({title: "dropdown"})
+                +input-container({title: "dropdown"})
+                    +dropdown({dropdownType: "rooms", placeholder: "Удобства номера", name:"dropdown-rooms", items: ["спальни", 
+                                                                                                                     "кровати",
+                                                                                                                     "ванные комнаты"]})
             .form-elements__elem.form-elements__elem--margined
-                +expandable-checkbox-list({title: "expandable checkbox list"})
-            
+                +checkbox-buttons({title: "expandable checkbox list",  checkboxType: "checkboxExpandableList", positions:  [{title: "Завтрак", checked: false}, 
+                                                                                                                            {title: "Письменный стол", checked: true},
+                                                                                                                            {title: "Стул для кормления", checked: true},
+                                                                                                                            {title: "Кроватка", checked: true}, 
+                                                                                                                            {title: "Телевизор", checked: false},
+                                                                                                                            {title: "Шампунь", checked: false}]})                                                                                                                                                                                     
+
         .form-elements__cell
 
             .form-elements__elem.form-elements__elem--margined
-                +rich-checkbox-buttons({title: "rich checkbox buttons"})
+                +checkbox-buttons({title: "rich checkbox buttons", checkboxType: "richCheckboxButtons", positions: [{title: "Широкий коридор", text: "Ширина коридора в номере не менее 91 см.", checked: false}, 
+                                                                                                                    {title: "Помощник для инвалидов", text: "На первом этаже вас встретит специалист и проводит до номера.", checked: false}]})
                
         .form-elements__cell
 
@@ -88,7 +98,7 @@ block main
                 +additional-options(params)
 
         .form-elements__cell
-        
+
             .form-elements__elem.form-elements__elem--margined
                 +reviews(params) 
                    

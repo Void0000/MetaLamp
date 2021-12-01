@@ -1,0 +1,27 @@
+mixin dropdown(params)
+ 
+  - let items = [...params.items]
+  - let dropdownClass = ['dropdown']
+  - let placeholder = params.placeholder, dropdownType = params.dropdownType, name = params.name
+
+    case params.dropdownType
+        when dropdownType= "guests"
+            - dropdownClass.push(dropdownClass +'--guests')
+        when dropdownType= "rooms"
+            - dropdownClass.push(dropdownClass +'--rooms')
+
+            
+    div(class = dropdownClass)
+        +text-field({placeholder, class: 'dropdown__input', ro:'true', name})
+        .dropdown__menu
+            each val in items
+                .dropdown__option
+                    span.dropdown__category= val
+                    .dropdown__buttons
+                        button(type = "button").dropdown__button-decrease remove
+                        span.dropdown__count 0
+                        button(type = "button").dropdown__button-increase add
+            .dropdown__option
+                    span.dropdown__empty-span
+                    button(type = "button").dropdown__apply-button применить
+                    

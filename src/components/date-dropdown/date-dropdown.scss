@@ -33,7 +33,7 @@
 
 #start_one, #end_one {
     cursor: pointer;
-    margin-top: 0.1rem;
+    margin-top: 0.25rem;
     @include field;
     width: 7.5rem;
 }
@@ -50,8 +50,9 @@
     color: $darkshade50;
     font-size: 1.3rem;
     left: 18rem;
-    top: 0.85rem;
+    top: 1rem;
     text-transform: lowercase;
+    font-weight: normal;
 }
 
 .one::before {
@@ -62,8 +63,9 @@
     color: $darkshade50;
     font-size: 1.3rem;
     left: 7.3rem;
-    top: 0.85rem;
+    top: 1rem;
     text-transform: lowercase;
+    font-weight: normal;
 
 }
 

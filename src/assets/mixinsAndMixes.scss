@@ -10,13 +10,6 @@ $greenGradient: linear-gradient( #6ecfa0,#67d2dd);
 $purpleGradient: linear-gradient(#b59dfe, #95a2fa );  
 $purpleGradient50: linear-gradient(#ede6ff, #e3e8fe );  
 
-
-// * {
-//     margin: 0;
-//     padding: 0;
-//     box-sizing: inherit;
-// }
-
 @mixin field {
     border: solid $darkshade25 1px;
     border-radius: 4px;
@@ -55,11 +48,28 @@ $purpleGradient50: linear-gradient(#ede6ff, #e3e8fe );
     letter-spacing: 0.015rem;
 }
 
-
 @mixin body {
     font-family: 'montserrat';
     color: $darkshade50;
     font-weight: 400;
     font-size: 0.72rem;
     letter-spacing: 0.01rem;  
+}
+
+@keyframes  slide-down {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes  slide-up {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }

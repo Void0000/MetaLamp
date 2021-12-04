@@ -13,54 +13,48 @@
             font-weight: bold;
         }
     }
-
     &__form {
-
             width: 16.7rem;
     }
-
     &__dash {
             margin: 0 0 0 0.2rem;
     }
-
     &__lower-value {
             @include body;
             margin: 0 0 0 4.3rem;
             letter-spacing: 0.05rem;
     }    
-
     &__upper-value {
             margin: 0 0 0 0.1rem;
     }
-
   }
 
  
 
     
 #nonlinear {
- 
-  margin-top: 1.44rem;
+  margin-top: 1.4rem;
   height: 0.4rem;
   cursor: pointer;
+  background: white;
 }
     
 .noUi-connect {
   position: relative;
   background: $greenGradient;
-  height: 0.4rem;
+  padding: 1rem;
 }
 
 .noUi-origin {
   position: absolute;
-  top: -0.5rem;
-  }
+  top: -0.8rem;
+}
 
 .noUi-handle {
   cursor: pointer;
-  padding: 1rem;
+  padding: 0.95rem;
   background: $greenGradient;
-  border: 1px solid white;
+  border: 5px solid white;
   box-shadow: none;
   border-radius: 50% ;
   transform: scale(0.4);

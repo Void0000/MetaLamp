@@ -21,16 +21,12 @@
         list-style: none;
         padding-left: 1.3rem;
         font-size: 0.85rem;
-    }
+        line-height: 1.4rem;
 
-    
+    }
 
     &__ul > li{
         position: relative;
-    }
-
-    &__ul:last-child {
-        line-height: 1.4rem;
     }
 
     &__ul > li::after {

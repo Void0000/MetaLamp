@@ -1,16 +1,20 @@
 mixin reviews(params)
 
+        - let {guestName} = params
+        - let {time} = params
+        - let {review} = params
+
 
         .reviews 
             .reviews__image
-                span.reviews__span-image 
+                span.reviews__span-image: img(src= params.img alt=params.guestName)
                 .reviews__name
-                    span.reviews__span-name Мурад Сарафанов
-                    span.reviews__span-time 5 дней назад
+                    span.reviews__span-name #{guestName}
+                    span.reviews__span-time #{time}
             .reviews__text        
                 .reviews__like
-                    +like-button({title: ""})    
-                span.reviews__span-text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+                    +like-button(params)    
+                span.reviews__span-text #{review}
             
 
             

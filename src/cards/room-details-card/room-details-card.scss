@@ -1,0 +1,100 @@
+@import '../../assets/mixinsAndMixes.scss';
+
+.room-details-card{
+
+    box-shadow: 0 0 10px 0.1rem $darkshade25;
+    border-radius: 3px;
+    width: 20rem;
+    padding-left: 1.8rem;
+    padding-top: 2.4rem;
+    padding-bottom: 1.85rem;
+    padding-right: 1.8rem;
+
+    &__title {
+        @include h1;
+        display: flex;
+    }
+
+    &__title-numbers {
+        @include h3;        
+        flex-grow: 1;
+    }
+
+    &__numbers-number {
+        margin-left: 0.31rem;
+        @include h1;
+    }
+
+    &__numbers-lux {
+        @include body;
+        font-weight: bold;
+        color: $purple;
+        margin-left: 0.5rem;
+    }
+
+    &__title-cost {
+        display: flex;
+        align-items: baseline;
+        gap: 0.2rem;
+        padding-top: 0.5rem;
+        @include body;
+        font-weight: bold;
+    }
+
+    &__span-time {
+        @include body;
+    }
+
+    &__date-dropdown {
+        margin-top: 1rem;
+    }
+
+    &__guests-dropdown {
+        margin-top: 1.05rem;
+    }
+
+    &__cost-details{
+        @include body;
+        color: $darkshade75;
+        font-size: 0.85rem;
+        display: grid;
+        grid-template-columns: 13.6rem 0.8rem 5rem; 
+        row-gap: 1.02rem;
+        margin-top: 1.38rem ;
+        line-height: 1.1rem;
+    }
+
+    &__column-icon{
+        font-family: 'material icons';
+        font-weight: normal;
+        color: $darkshade25;
+        font-size: 1.55rem;
+        cursor: pointer;
+    }
+    
+    &__column-cost{
+        text-align: right;
+    }
+
+    &__summa{
+        display: flex;
+        align-items: baseline;        
+        @include h2;
+        margin-top: 1.9rem;
+         &::before {
+            content: ''; /* Выводим линию */
+            border-bottom: 1px dotted $darkshade25; /* Параметры линии */
+            flex-grow: 1; /* Линия занимает всё доступное пространство */
+            order: 2; /* Выводим вторым */
+            margin: 0 0.1rem; /* Расстояние от текста */
+           }
+    }
+
+    &__summa-cost{
+        order: 3;
+    }
+
+    &__button{
+        margin-top: 1.24rem;
+    }
+}

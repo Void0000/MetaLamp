@@ -8,47 +8,51 @@
         &--bold {
             text-transform: uppercase;
             @include h3;
-            margin-left: 0;
-            font-weight: bold;
         }
     }
     
-    
-
-    &__dislike {
+     &__like {
+      display: flex;
       cursor: pointer;
-      @include body;
-      font-size: 0.6rem;
-      background:url('../../assets/images/Group 3.jpg') no-repeat center;
-      border: none;
-      height: 1.25rem;
+      align-items: center;
+      gap: 0.4rem;
+      background: white;
+      border: 1px solid $purple;
+      border-radius: 1rem;
       width: 2.5rem;
-      text-align: end;
-    }
+      &--disliked {
+        border-color:  $darkshade25;
+      }
+      }         
+ 
+      &__count{
+        @include body;
+        line-height: 0;
+        color: $purple;
+        font-size: 0.6rem;
+        padding: 0.5rem 0;
 
-    &__dislike--liked {
-      background:url('../../assets/images/Group 4.jpg') no-repeat center;
-     }
+        &--disliked {
+          color: $darkshade25;
+        }
+      }
+     
+      &__span-favorite {
+        background: $purpleGradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: initial;
+        font-family: 'material icons';
+        font-weight: normal;
+        font-size: 0.6rem;
 
-    
+        &--disliked {
+          background: white;
+          -webkit-background-clip:border-box;
+          -webkit-text-fill-color: $darkshade25;
+        }
+      }
 
-    &__like {
-      cursor: pointer;
-      @include body;
-      color: $purple;
-      font-size: 0.6rem;
-      background:url('../../assets/images/Group 4.jpg') no-repeat center;
-      border: none;
-      height: 1.25rem;
-      width: 2.5rem;
-      text-align: end;
-      }        
-         
-      &__like--disliked {
-      background:url('../../assets/images/Group 3.jpg') no-repeat center;
-      } 
-
-      &__dislike:focus,
       &__like:focus {
         opacity: 1;
       }

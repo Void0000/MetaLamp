@@ -1,0 +1,39 @@
+@import '../../assets/mixinsAndMixes.scss';
+
+.log-in-card{
+
+    box-shadow: 0 0 10px 0.1rem $darkshade25;
+    border-radius: 3px;
+    width: 20rem;
+    padding-left: 1.8rem;
+    padding-top: 2.4rem;
+    padding-bottom: 1.85rem;
+    padding-right: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    
+
+    &__title {
+        @include h1;
+    }
+
+    &__log-in {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+    
+    &__sign-in {
+        display: flex;
+        align-items: baseline;
+        margin-top: 0.7rem;
+    }
+
+    &__sign-in-span {
+        @include body;
+        flex-grow: 1;
+    }
+
+ 
+}

@@ -1,14 +1,16 @@
 mixin bullet-list(params)
-   
-   
-    if (params.title)
-        span.like-button__title--bold= params.title
 
-        .bullet-list
-            span.like-button__title.like-button__title--bold 
-            ul.bullet-list__ul
-                li Нельзя с питомцами
-                li Без вечеринок и мероприятий
-                li Время прибытия &#8212 после 13:00, а выезд до 12:00
+    - let {list} = params
+    - let {title} = params
+
+    
+   
+  
+    .bullet-list
+        span.like-button__title.like-button__title--bold #{title}
+        ul.bullet-list__ul
+            each val in list
+                li!= val
+
 
             

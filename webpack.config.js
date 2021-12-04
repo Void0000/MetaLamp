@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === 'production') {
     mode = 'production'
 }
 
-let entryHmtl = 'src/pages/uiKit/formElements/formElements.pug'
+let entryHmtl = 'src/pages/uiKit/uiKit.pug'
 // 'src/pages/uiKit/formElements/formElements.pug'
 // 'src/samples/uiKit/uiKit.pug'
 

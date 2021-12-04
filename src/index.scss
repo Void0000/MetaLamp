@@ -2,13 +2,12 @@
 @import './assets/fonts/fonts.scss';
 
 .nowrap {
-
     white-space: nowrap;
   }
 
 body {
-  max-width: 1920;
-  min-width: 320;
+  max-width: 1920px;
+  min-width: 320px;
   padding: 0;
   margin: 0;
   font-family: 'Montserrat', Helvetica , Arial, sans-serif, 'Material Icons';

@@ -2,8 +2,7 @@
 $checkbox-width: 20px;
 
 .checkbox-buttons,
-.expandable_checkbox_list,
-.rich_checkbox_list {
+.expandable_checkbox_list {
 
   display: none;
 
@@ -18,12 +17,15 @@ $checkbox-width: 20px;
             font-weight: bold;
         }
     }
+    
     &__form {
       margin-top: 1.1rem;
       }
 
     &__container {
       width: max-content;
+
+      box-sizing: content-box;
       letter-spacing: 0.05rem;
       margin-top: 0.8rem;
       display: flex;
@@ -75,11 +77,19 @@ $checkbox-width: 20px;
     &__container &__checkmark:after {
       font-family: 'material icons';
       content: 'done';
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       color: $purple;
-      top: 0.1rem;
-      left: 0.25rem;
+      background: $purpleGradient;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;      
+      top: 0.08rem;
+      left: 0.2rem;
     }
+    
+    &__span-rich-checkbox {
+      display: none;
+    }
+   
   }
 
   .expandable_checkbox_list {
@@ -131,19 +141,34 @@ $checkbox-width: 20px;
     &__checkmark {
       top: 0rem;
     }
+
   }
 
-  .rich_checkbox_list {
+  .checkbox-buttons--rich {
 
-    &__container {
-      flex-direction: column;
+     .checkbox-buttons__container {
+      margin-top: 0.6rem;
+      @include h3;
+      font-size: 0.8rem;
+      color: $darkshade50;
+      letter-spacing: 0.05rem;
+    }
+
+    .checkbox-buttons__checkmark {
+      top: -0.1rem;
+    }
+
+    .checkbox-buttons__span-rich-checkbox {
+      display: block;
+      margin-left: 1.9rem;
+      margin-top: 0.4rem;
+      letter-spacing: 0.02rem;
+      box-sizing: border-box;
+      width: 100%;
     }
   }
-
+  
   .expandable_checkbox_list--visible,
-  .checkbox-buttons--visible,
-  .rich_checkbox_list--visible {
-
+  .checkbox-buttons--visible {
     display: block;
-
   }

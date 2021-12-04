@@ -6,7 +6,7 @@ mixin checkbox-buttons(params)
 
     - let checkboxListClass = ['checkbox-buttons']
     - let checkboxExpandableClass = ['expandable_checkbox_list']
-    - let richCheckboxClass = ['rich_checkbox_list']
+    - let checkboxRichClass = ['checkbox-buttons--rich']
 
     case params.checkboxType
         when checkboxType= "checkboxList"
@@ -16,15 +16,17 @@ mixin checkbox-buttons(params)
             - checkboxExpandableClass.push(checkboxExpandableClass +'--visible')
 
         when checkboxType= "richCheckboxButtons"
-            - richCheckboxClass.push(richCheckboxClass +'--visible')
+            - checkboxListClass.push(checkboxListClass +'--visible', checkboxRichClass) 
+
     
     div(class = checkboxListClass)
         span.checkbox-buttons__title.checkbox-buttons__title--bold #{title}
         form.checkbox-buttons__form 
-        each val in positions
-            label.checkbox-buttons__container= val.title
-                input.checkbox-buttons__input(type="checkbox" checked=val.checked)
-                span.checkbox-buttons__checkmark  
+            each val in positions
+                label.checkbox-buttons__container!= val.title
+                    input.checkbox-buttons__input(type="checkbox" checked=val.checked)
+                    span.checkbox-buttons__checkmark  
+                span.checkbox-buttons__span-rich-checkbox!= val.text
 
     div(class = checkboxExpandableClass)
         details.expandable_checkbox_list__details
@@ -32,16 +34,9 @@ mixin checkbox-buttons(params)
                 span.expandable_checkbox_list__span  #{title}
             form.expandable_checkbox_list__form 
                 each val in positions
-                    label.expandable_checkbox_list__container= val.title
+                    label.expandable_checkbox_list__container!= val.title
                         input.expandable_checkbox_list__input(type="checkbox" checked=val.checked)
                         span.expandable_checkbox_list__checkmark  
 
-    div(class = richCheckboxClass)
-        span.rich_checkbox_list__title.rich_checkbox_list__title--bold #{title}
-        form.rich_checkbox_list__form 
-            each val in positions
-                label.rich_checkbox_list__container= val.title    
-                    span.rich_checkbox_list__container= val.text
-                    input.rich_checkbox_list__input(type="checkbox" checked=val.checked)
-                    span.rich_checkbox_list__checkmark  
+ 
                                                 

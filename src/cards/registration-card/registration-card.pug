@@ -1,0 +1,37 @@
+mixin registration-card(params)
+
+    - let {title} = params
+    - let {accText} = params 
+
+
+    .registration-card   
+        .registration-card__title #{title}
+        .registration-card__text-fields     
+            +input-container({title: ""})
+                +text-field({placeholder: "Имя"})
+            +input-container({title: ""})
+                +text-field({placeholder: "Фамилия"})
+        .registration-card__radio-buttons
+            +radio-buttons({buttons: [{title: "Мужчина", checked: true}, 
+                                                              {title: "Женщина", checked: false}]})                                                                                  
+        .registration-card__birthday-field
+            +input-container({title: "дата рождения"})
+                +text-field({name: "masked-text-field", mask: "date-mask"})
+
+        .registration-card__data
+            +input-container({title: "данные для входа в сервис"})
+                +text-field({type: "email", placeholder: "Email"})
+            +input-container({title: ""})
+                +text-field({placeholder: "Пароль"})
+        .registration-card__toggle
+            +toggle({title: "toggle", desc:"Получать спецпредложения"})
+        .registration-card__button
+            +buttons({buttonText: "перейти к оплате", theme: "pay"})
+        .registration-card__sign-in
+            span.registration-card__sign-in-span #{accText}
+            +buttons({buttonText: "войти", theme: "counter's"})                                                       
+
+
+
+
+            

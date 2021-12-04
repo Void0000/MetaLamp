@@ -1,0 +1,23 @@
+mixin log-in-card(params)
+
+    - let {title} = params
+    - let {accText} = params
+
+
+    .log-in-card   
+        .log-in-card__title!= title
+        .log-in-card__log-in
+            +input-container({title: ""})
+                +text-field({placeholder: "Email", type: "email"})
+            +input-container({title: ""})
+                +text-field({placeholder: "Пароль"}) 
+        .log-in-card__button 
+            +buttons({buttonText: "войти", theme: "pay", })    
+        .log-in-card__sign-in
+            span.log-in-card__sign-in-span #{accText}
+            +buttons({buttonText: "создать", theme: "counter's"})                                                   
+
+        
+            
+
+            

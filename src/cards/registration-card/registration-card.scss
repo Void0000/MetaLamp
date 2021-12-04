@@ -1,0 +1,59 @@
+@import '../../assets/mixinsAndMixes.scss';
+
+.registration-card{
+
+    box-shadow: 0 0 10px 0.1rem $darkshade25;
+    border-radius: 3px;
+    width: 20rem;
+    padding-left: 1.8rem;
+    padding-top: 2.45rem;
+    padding-bottom: 1.85rem;
+    padding-right: 1.8rem;
+
+
+    &__title {
+        @include h1;
+    }
+
+    &__text-fields   {
+        margin-top: 1.28rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+
+    &__radio-buttons {
+        margin-top: 0.7rem;
+    }
+
+    &__birthday-field {
+        margin-top: 1rem;
+    }
+
+    &__data {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.67rem;
+    }
+
+    &__toggle {
+        margin-top: 0.55rem;
+    }
+
+    &__button {
+        margin-top: 1.35rem;
+    }
+
+    &__sign-in {
+        display: flex;
+        margin-top: 1.95rem;
+        align-items: baseline;
+        @include body;
+        font-size: 0.87rem;
+        margin-bottom: 0.2rem;
+    }
+    &__sign-in-span {
+       flex-grow: 1;
+    }
+}

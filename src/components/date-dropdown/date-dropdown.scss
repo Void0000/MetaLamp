@@ -10,13 +10,11 @@
         &--bold {
             text-transform: uppercase;
             @include h3;
-            font-weight: bold;
         }
         &--boldSecond {
             text-transform: uppercase;
             @include h3;
-            margin-left: 3.5rem;
-            font-weight: bold;
+            margin-left: 6rem;
         }
     }
     
@@ -24,37 +22,22 @@
 
 .one {
     position: relative;
+    display: flex;
+    gap: 1.25rem;
 }
 
 .datepicker {
     margin-top: 30.9rem;
-    
 }
 
 #start_one, #end_one {
     cursor: pointer;
     margin-top: 0.25rem;
     @include field;
-    width: 7.5rem;
+    width: 7.6rem;
 }
 
-#end_one {
-    margin-left: 1.4rem;
-}
-
-.one::after {
-    cursor: pointer;
-    position: absolute;
-    font-family: 'material icons';
-    content: 'expand_more';
-    color: $darkshade50;
-    font-size: 1.3rem;
-    left: 18rem;
-    top: 1rem;
-    text-transform: lowercase;
-    font-weight: normal;
-}
-
+.one::after,
 .one::before {
     cursor: pointer;
     position: absolute;
@@ -62,11 +45,14 @@
     content: 'expand_more';
     color: $darkshade50;
     font-size: 1.3rem;
-    left: 7.3rem;
-    top: 1rem;
+    left: 17.95rem;
+    top: 1.2rem;
     text-transform: lowercase;
     font-weight: normal;
+}
 
+.one::before {
+    left: 7.35rem;
 }
 
 #start_one::placeholder,

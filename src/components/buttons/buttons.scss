@@ -7,108 +7,95 @@
         &--bold {
           text-transform: uppercase;
             @include h3;
-            margin-left: 0;
             font-weight: bold;
         }
     }
 
-    &__fill-button {
+    &__button {
       @include h3;
-      color: white;
       text-transform: uppercase;
-      cursor: pointer;
-      margin-top: 1rem;
-      margin-left: 0.05rem;
       height: 2.74rem;
       width: 6.2rem;
-      border: none;
       border-radius: 2rem;
+      cursor: pointer;
+      border: none;
+
+    &--fill {
+      color: white;
       background: $purpleGradient;
-    }
-
-    &__fill-button-second {
-     margin-left: 1.15rem;
-    }
-
-    &__fill-button:hover, 
-    &__fill-button:focus {
-           opacity: 0.5;
+        
+        &:hover, 
+        &:focus {
+                opacity: 0.5;
+        }
     }
     
-    &__counter-button {
-      @include h3;
-      color: transparent;
-      text-transform: uppercase;
-      cursor: pointer;
-      margin-top: 1.9rem;
-      height: 2.74rem;
-      width: 6.2rem;
-      border: none;
-      border-radius: 2rem;
-      background:url('../../assets/images/Button Default.jpg') no-repeat center;
-    }
-
-    &__counter-button-second {
-     margin-left: 1.2rem;
-    }
-
-    &__counter-button:hover, 
-    &__counter-button:focus {
-      background:url('../../assets/images/Button Hover.jpg') no-repeat center;
-    }
-
-    &__no-border-button {
-      @include h3;
-      color: $purple;
-      text-transform: uppercase;
-      cursor: pointer;
-      margin-top: 1.8rem;
-      border: none;
-      background:none;
-    }
-
-    &__no-border-button-second {
-     margin-left: 0.5rem;
-    }
-
-    &__no-border-button:hover, 
-    &__no-border-button:focus {
-      color: $darkshade50;
-    }
-
-    &__pay-button {
+    &--counter {
       position: relative;
-      @include h3;
-      color: white;
-      text-transform: uppercase;
-      cursor: pointer;
-      margin-top: 1.79rem;
-      height: 2.74rem;
-      width: 20rem;
-      border: none;
-      border-radius: 2rem;
-      background: $purpleGradient;
+      color: $purple;
+      background: white;
+      height: 2.5rem;
+      width: 6rem;
+
+        &::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        bottom: -2px;
+        left: -2px;
+        right: -2px;
+        border-radius: inherit;
+        background: $purpleGradient ;
+        z-index: -1;
+        }
+
+      &:hover, 
+      &:focus {
+
+        &::before {
+          opacity: 0.5;
+          }      
+      }
     }
 
-    &__pay-button::after {
-      position: absolute;
-      text-transform: lowercase;
-      font-family: 'material icons';
-      font-size: 1.35rem;
-      font-weight: normal;
-      content: 'arrow_forward';
-      top: 0.7rem;
-      left: 17.94rem;
-      }
+    &--no-border {
+      color: $purple;
+      background:none;
 
-    &__pay-button:hover, :focus {
+      &:hover, 
+      &:focus {
+        color: $darkshade50;      
+      }
+    }
+
+    &--pay {
+      position: relative;
+      color: white;
+      width: 20rem;
+      background: $purpleGradient;
+
+      &:hover, 
+      &:focus {
       opacity: 0.5;
     }
+
+      &::after {
+        display: flex;
+        position: absolute;
+        text-transform: lowercase;
+        font-family: 'material icons';
+        font-size: 1.35rem;
+        font-weight: normal;
+        content: 'arrow_forward';
+        top: 0.95rem;
+        left: 17.94rem;
+        }
+    }
+  }
 }
 
 
 
  
-
 
 

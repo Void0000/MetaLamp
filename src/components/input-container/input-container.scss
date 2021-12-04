@@ -10,6 +10,7 @@
             text-transform: uppercase;
 
             @include h3;
+            letter-spacing: 0.033rem;
             font-weight: bold;
         }
 
@@ -24,7 +25,6 @@
     }
 
     &__input {
-        margin-top: 0.31rem;
         color: $darkshade50;
     }
 

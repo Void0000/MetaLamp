@@ -1,0 +1,18 @@
+mixin search-card(params)
+
+    - let title = params.title
+
+
+    .search-card   
+        .search-card__title!= title
+        .search-card__dates     
+            +date-dropdown({title: "прибытие", titleSecond: "выезд"})
+        .search-card__dropdown
+            +input-container({title: "гости"})        
+                +dropdown({dropdownType: "guests", placeholder: "Сколько гостей", name:"dropdown-guests", items: ["взрослые" ,
+                                                                                                                  "дети",
+                                                                                                                  "младенцы"]})
+        .search-card__button
+            +buttons({buttonText: "подобрать номер", theme: "pay"})                                                                                                          
+
+            

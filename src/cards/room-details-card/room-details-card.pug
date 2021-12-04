@@ -1,0 +1,44 @@
+mixin room-details-card(params)
+
+    - let {number}= params
+    - let {lux} = params
+    - let {cost} = params
+    
+    block 
+    mixin room-details-title(params)
+
+                .room-details-card__title
+                    .room-details-card__title-numbers №
+                        span.room-details-card__numbers-number #{number}
+                        span.room-details-card__numbers-lux #{lux}
+                    .room-details-card__title-cost  #{cost}&#x20bd
+                        span.room-details-card__span-time  в сутки
+
+    .room-details-card   
+
+        +room-details-title(params)
+
+        .room-details-card__date-dropdown
+            +date-dropdown({title: "прибытие", titleSecond: "выезд"})
+        .room-details-card__guests-dropdown       
+            +input-container({title: "гости"})        
+                +dropdown({dropdownType: "guests", placeholder: "Сколько гостей", name:"dropdown-guests", items: ["взрослые" ,
+                                                                                                                      "дети",
+                                                                                                                      "младенцы"]})
+        .room-details-card__cost-details
+            .room-details-card__column-title 9 900&#x20bd x 4 суток                    
+            .room-details-card__column-icon                    
+            .room-details-card__column-cost 9 900&#x20bd              
+            .room-details-card__column-title Сбор за услуги: скидка 2179&#x20bd             
+            .room-details-card__column-icon(title="info") info           
+            .room-details-card__column-cost 0&#x20bd                
+            .room-details-card__column-title Сбор за дополнительные услуги              
+            .room-details-card__column-icon(title="info") info              
+            .room-details-card__column-cost 300&#x20bd 
+               
+                   
+        .room-details-card__summa Итого
+            span.room-details-card__summa-cost 38 081&#x20bd
+
+        .room-details-card__button
+            +buttons({buttonText: "забронировать", theme: "pay"})                                                      

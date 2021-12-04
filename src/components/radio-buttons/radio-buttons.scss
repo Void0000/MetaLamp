@@ -9,29 +9,22 @@
         &--bold {
           text-transform: uppercase;
             @include h3;
-            margin-left: 0;
-            font-weight: bold;
         }
     }
 
+&__form {
+  display: flex;
+  gap: 1.2rem;
+}
+
 /* Customize the label (the container) */
-&__container {
-  margin-left: 0.05rem ;
-    @include body;
-    font-size: 0.84rem;
-    display: inline-block;
+&__container {    
     position: relative;
-    padding-left: 2rem;
-    margin-top: 1rem;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-
-    &--women {
-        margin-left: 1.2rem ;
-    }
   }
   
   /* Hide the browser's default radio button */
@@ -42,14 +35,19 @@
     height: 0;
     width: 0;
   }
+
+  &__span-text {
+    @include body;
+    margin-left: 1.9rem;
+  }
   
   /* Create a custom radio button */
   &__checkmark {
     position: absolute;
     top: 0;
     left: 0;
-    height: 1.1rem;
-    width: 1.1rem;
+    width: 1.15rem;
+    height: 1.15rem;
     // background-color: rgb(100, 99, 99);
     border-radius: 50%;
     border: 1px solid $purple

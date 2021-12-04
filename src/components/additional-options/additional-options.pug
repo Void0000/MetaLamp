@@ -1,16 +1,21 @@
 mixin additional-options(params)
 
+        - let {options} = params
+
+            //- 
+
+            //-     case val.img
+            //-         when img="smile"
+            //-             - asd.innerHTML: img(src='../../assets/images/insert_emoticon.jpg')    
+
 
         .additional-options 
-            .additional-options__comfort
-                span.additional-options__span-comfort-image
-                .additional-options__comfort-text
-                    span.additional-options__span-comfort-text.additional-options__span-comfort-text--bold Комфорт 
-                    span.additional-options__span-comfort-text   Шумопоглощающие стены 
-            .additional-options__convenience
-                span.additional-options__span-convenience-image
-                .additional-options__convenience-text
-                    span.additional-options__span-convenience-text.additional-options__span-convenience-text--bold Удобство 
-                    span.additional-options__span-convenience-text Окно в каждой из спален
+            each val in options
+                .additional-options__option
+                    span.additional-options__span-image!= val.img 
+                    .additional-options-text
+                        span.additional-options__span-text.additional-options__span-text--bold=val.title
+                        span.additional-options__span-text= val.desc
+        
 
             

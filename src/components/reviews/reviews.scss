@@ -1,19 +1,25 @@
 @import '../../assets/mixinsAndMixes.scss';
 
 .reviews {
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
     
     @include body;
     &__image {
         display: flex;
         flex-direction: row;
+        gap: 0.5rem;
+        margin-left: 0.3rem;
     }
 
     &__span-image{
-        background: url('../../assets/images/image.jpg') no-repeat center;
-        padding: 1.5rem 2rem;
+            margin-top: 0.15rem;
     }
     
     &__name {
+        margin-top: 0.3rem;
         display: flex;
         flex-direction: column;
         row-gap: 0.6rem ;
@@ -30,10 +36,9 @@
         letter-spacing: 0.05rem;
         font-size: 0.8rem;
     }
-     
 
     &__like{
-       margin-top: 0.6rem;
+       margin-top: 0.1rem;
        margin-left: 0.7rem;
     }
 
@@ -44,16 +49,11 @@
     }
 
     &__span-text {
-        margin-top: 0.7rem;
         font-size: 0.8rem;
         letter-spacing: 0.045rem;
-        line-height: 1.4rem;
+        line-height: 1.45rem;
         width: 41rem;
-
     }
-
-      
-
 }
 
 

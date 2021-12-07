@@ -24,10 +24,16 @@
       color: white;
       background: $purpleGradient;
         
-        &:hover, 
-        &:focus {
+        &:hover 
+         {
                 opacity: 0.5;
         }
+
+        &:focus 
+        {
+              transition: 0.1s;
+               opacity: 1;
+       }
     }
     
     &--counter {
@@ -49,13 +55,21 @@
         z-index: -1;
         }
 
-      &:hover, 
-      &:focus {
 
-        &::before {
-          opacity: 0.5;
-          }      
-      }
+        &:hover 
+         {
+          &::before {
+            opacity: 0.5;
+            }    
+        }
+
+        &:focus  {
+          transition: 0.1s;
+          opacity: 1;  
+              
+       }
+    
+      
     }
 
     &--no-border {
@@ -74,21 +88,26 @@
       width: 20rem;
       background: $purpleGradient;
 
-      &:hover, 
-      &:focus {
-      opacity: 0.5;
-    }
+      &:hover 
+         {
+                opacity: 0.5;
+        }
+
+        &:focus 
+        {
+              transition: 0.1s;
+               opacity: 1;
+       }
 
       &::after {
-        display: flex;
         position: absolute;
         text-transform: lowercase;
         font-family: 'material icons';
         font-size: 1.35rem;
         font-weight: normal;
         content: 'arrow_forward';
-        top: 0.95rem;
-        left: 17.94rem;
+        top: 0.7rem;
+        left: 18rem;
         }
     }
   }

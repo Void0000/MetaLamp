@@ -1,8 +1,8 @@
 @import '../../assets/mixinsAndMixes.scss';
 
 .rate-button {
-    @include body;
-    position: relative;
+   
+    
     &__title {
       
         &--bold {
@@ -11,38 +11,29 @@
     }
     
     &__form {
-        
-      direction: rtl;
-      width: 8rem;
-        
+        overflow: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        width: max-content;
+        margin: 0;
     } 
 
-    &__form > input {
-        display: none;
-    }
-
-    &__form > label,
-    &__form > input:checked ~ label {
-        position: relative;
+    .star {
         cursor: pointer;
-        padding: 0rem 0.75rem;
-
-        &::after {
-            position: absolute;
-            content: 'star_outline';
-            font-family: 'material icons';
-            background: $purpleGradient;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: initial;
-            font-size: 1.5rem;
-        }
-    }
-
-    &__form > input:checked ~ label {
-
-        &::after {
-            content: 'star';
-       }
-    }
+      }
+  
+      .star:before {
+        font-family: "Material Icons";
+        font-weight: 400;
+        content: "star_border";
+        font-size: 1.5rem;
+        background: $purpleGradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: initial;
+      }
+      .star_active:before, .star_active ~ .star:before {
+        content:"star";
+      }
   }    

@@ -1,19 +1,18 @@
 mixin pagination(params)
    
    
-    if (params.title)
-        span.pagination__title--bold= params.title
+    +input-container({title: params.title, titleSecond: params.titleSecond})
+
     
 
  
 
-    .pagination
-        span.pagination__title.pagination__title--bold 
-        form.pagination__form
-            .pages
-            if (params.titleRentVariation)
-                .pagination__variables-rent= params.titleRentVariation
-            .pagination__variables-rent 
+        .pagination
+            form.pagination__form
+                .pages
+                if (params.titleRentVariation)
+                    .pagination__variables-rent= params.titleRentVariation
+                .pagination__variables-rent 
           
 
 

@@ -10,18 +10,17 @@ mixin dropdown(params)
         when dropdownType= "rooms"
             - dropdownClass.push(dropdownClass +'--rooms')
 
-            
-    div(class = dropdownClass)
-        +text-field({placeholder, class: 'dropdown__input', ro:'true', name})
-        .dropdown__menu
-            each val in items
+    +input-container({title: params.title})        
+        div(class = dropdownClass)
+            +text-field({placeholder, class: params.inputClass, ro:'true', name})
+            .dropdown__menu
+                each val in items
+                    .dropdown__option
+                        span.dropdown__category= val
+                        .dropdown__buttons
+                            button(type = "button").dropdown__button-decrease remove
+                            span.dropdown__count 0
+                            button(type = "button").dropdown__button-increase add
                 .dropdown__option
-                    span.dropdown__category= val
-                    .dropdown__buttons
-                        button(type = "button").dropdown__button-decrease remove
-                        span.dropdown__count 0
-                        button(type = "button").dropdown__button-increase add
-            .dropdown__option
-                    span.dropdown__empty-span
-                    button(type = "button").dropdown__apply-button применить
-                    
+                        span.dropdown__empty-span
+                        button(type = "button").dropdown__apply-button применить

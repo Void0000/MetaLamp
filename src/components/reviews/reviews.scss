@@ -27,7 +27,8 @@
 
     &__span-name {
         margin-top: 0.1rem;
-        @include h3;
+        @include body;
+        font-weight: bold;
         font-size: 0.85rem;
         color: $darkshade75;
     }
@@ -38,7 +39,6 @@
     }
 
     &__like{
-       margin-top: 0.1rem;
        margin-left: 0.7rem;
     }
 

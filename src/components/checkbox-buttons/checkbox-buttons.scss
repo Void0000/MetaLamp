@@ -8,13 +8,11 @@ $checkbox-width: 20px;
 
   width: 15rem;
   @include body;
-
+  line-height: 1rem;
     &__title {
 
         &--bold {
-          text-transform: uppercase;
             @include h3;
-            font-weight: bold;
         }
     }
     
@@ -24,7 +22,6 @@ $checkbox-width: 20px;
 
     &__container {
       width: max-content;
-
       box-sizing: content-box;
       letter-spacing: 0.05rem;
       margin-top: 0.8rem;
@@ -77,6 +74,7 @@ $checkbox-width: 20px;
     &__container &__checkmark:after {
       font-family: 'material icons';
       content: 'done';
+      text-transform: lowercase;
       font-size: 0.8rem;
       color: $purple;
       background: $purpleGradient;
@@ -119,7 +117,7 @@ $checkbox-width: 20px;
             text-transform: none;
             font-size: 1.35rem;
             left: 14.54rem;
-            top: -0.3rem;
+            top: -0.1rem;
             color: $darkshade50;
             font-weight: normal;
             transition: 0.2s ease-out;
@@ -145,10 +143,12 @@ $checkbox-width: 20px;
   }
 
   .checkbox-buttons--rich {
-
+      
      .checkbox-buttons__container {
-      margin-top: 0.6rem;
-      @include h3;
+       margin-top: 0.5rem;
+      @include body;
+      line-height: 1.2;
+      font-weight: bold;
       font-size: 0.8rem;
       color: $darkshade50;
       letter-spacing: 0.05rem;
@@ -160,6 +160,7 @@ $checkbox-width: 20px;
 
     .checkbox-buttons__span-rich-checkbox {
       display: block;
+      font-size: 0.74rem;
       margin-left: 1.9rem;
       margin-top: 0.4rem;
       letter-spacing: 0.02rem;

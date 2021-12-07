@@ -1,17 +1,17 @@
 @import '../../assets/mixinsAndMixes.scss';
 
 .input-container {
-    
+    margin: 0;
+    padding: 0;
     @include body;
+    width: max-content;
 
     &__title {
 
         &--bold {
-            text-transform: uppercase;
 
             @include h3;
             letter-spacing: 0.033rem;
-            font-weight: bold;
         }
 
         &--secondTitle
@@ -19,12 +19,14 @@
             text-transform: uppercase;
             @include body;
             font-weight: normal;
-            margin-left: 12rem;
         }
         
     }
 
     &__input {
+            width: max-content;
+
+        margin-top: 0.25rem;
         color: $darkshade50;
     }
 

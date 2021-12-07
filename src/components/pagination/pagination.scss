@@ -2,6 +2,7 @@
 
 .pagination {
     @include body;
+    line-height: 0;
     
     &__title {
       
@@ -23,7 +24,7 @@
 .simple-pagination li {
   position: relative;
   display: inline;
-  padding: 1.05rem;
+  padding: 1.01rem;
   
 
 }
@@ -65,8 +66,9 @@ color: $darkshade50;
   font-weight: normal;
   vertical-align: middle;
   background: $greenGradient;
-  padding: 0.6rem 0.58rem;
+  padding: 0.6rem 0.6rem;
   border-radius: 50%;
+  line-height: 1.26rem;
 }
 
 .current.next {

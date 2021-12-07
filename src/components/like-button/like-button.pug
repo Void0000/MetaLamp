@@ -1,17 +1,18 @@
 mixin like-button(params)
+
+    +input-container({title: params.title, titleSecond: params.titleSecond})
+
    
    
-    if (params.title)
-        span.like-button__title--bold= params.title
+    
 
 
    
-    .like-button
-        span.like-button__title.like-button__title--bold 
-        form.like-button__form
+        .like-button
+            form.like-button__form
+                
+                button(type="button").like-button__like.js-like-button__like 
+                    span.like-button__span-favorite favorite
+                    span.like-button__count 12
+
             
-            button(type="button").like-button__like.js-like-button__like 
-                span.like-button__span-favorite favorite
-                span.like-button__count 12
-
-          

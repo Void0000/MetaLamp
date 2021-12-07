@@ -1,0 +1,32 @@
+mixin number-card(params)
+    - let {count} = params
+
+
+    .number-card  
+        .number-card__picture
+            img(src=params.img)
+            .number-card__buttons
+                .number-card__left-cell
+                    button(type="button").number-card__cell-button expand_more  
+                .number-card__right-cell
+                    button(type="button").number-card__cell-button expand_more
+            .number-card__cell-circle-buttons 
+                button(type="button").number-card__circle.number-card__circle--current
+                button(type="button").number-card__circle
+                button(type="button").number-card__circle
+                button(type="button").number-card__circle
+        .number-card__desc  
+            +room-details-title(params)
+        .number-card__rate  
+            .number-card__rate-button
+               +rate-button({title: ""}, stars= params.stars, rate= params.rate)
+            .number-card__review
+                span.number-card__count-reviews #{count} 
+                span.number-card__reviews  Отзывов
+        
+                                                          
+
+        
+            
+
+            

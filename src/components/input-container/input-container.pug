@@ -1,16 +1,13 @@
 mixin input-container(params)
-    - var classes = ['input-container']
+    - let {title} = params
+    - let {titleSecond} = params
+
    
 
 
 
-    div(class=classes)
-        if (params.title)
-            span.input-container__title--bold= params.title
-        span.input-container__title.input-container__title--bold
-        if (params.titleSecond)
-            span.input-container__title--secondTitle= params.titleSecond
-        span.input-container__title--bold 
-        form.input-container__form
-            .input-container__input
-                block
+    .input-container
+        span.input-container__title--bold #{title}
+        span.input-container__title--secondTitle  #{titleSecond}
+        .input-container__input
+            block

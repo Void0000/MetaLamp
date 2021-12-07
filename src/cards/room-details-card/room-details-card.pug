@@ -1,11 +1,13 @@
 mixin room-details-card(params)
 
-    - let {number}= params
-    - let {lux} = params
-    - let {cost} = params
+  
     
-    block 
+     
     mixin room-details-title(params)
+
+                - let {number}= params
+                - let {lux} = params
+                - let {cost} = params
 
                 .room-details-card__title
                     .room-details-card__title-numbers №
@@ -13,6 +15,7 @@ mixin room-details-card(params)
                         span.room-details-card__numbers-lux #{lux}
                     .room-details-card__title-cost  #{cost}&#x20bd
                         span.room-details-card__span-time  в сутки
+                block
 
     .room-details-card   
 
@@ -21,8 +24,7 @@ mixin room-details-card(params)
         .room-details-card__date-dropdown
             +date-dropdown({title: "прибытие", titleSecond: "выезд"})
         .room-details-card__guests-dropdown       
-            +input-container({title: "гости"})        
-                +dropdown({dropdownType: "guests", placeholder: "Сколько гостей", name:"dropdown-guests", items: ["взрослые" ,
+            +dropdown({title: "гости", dropdownType: "guests", placeholder: "Сколько гостей", name:"dropdown-guests", inputClass:"dropdown__input", items: ["взрослые" ,
                                                                                                                       "дети",
                                                                                                                       "младенцы"]})
         .room-details-card__cost-details

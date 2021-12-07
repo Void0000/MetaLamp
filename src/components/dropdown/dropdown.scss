@@ -8,19 +8,31 @@
         content: 'expand_more';
         position: absolute;
         left: 17.85rem;
-        top: 0.6rem;
+        top: 0.7rem;
         font-size: 1.5rem;
         cursor: pointer;
+        color: $darkshade50;
+        text-transform: lowercase;
+        font-weight: normal
     }
 
-    &__input {
+    .text-field__input {
+       @include field;
+
        cursor: pointer;
+       
+         &:hover,
+         &:focus {
+            @include hover;
+         }
     }
    
-    &__input--opened {
+    .text-field__input--opened
+   
+     {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
-        border-color: $darkshade75;
+        border-color: $darkshade50;
     }
 
     &__menu {
@@ -99,12 +111,12 @@
                 left: 14.5rem;
             }
         
-            .dropdown__input {
-                width: 14.8rem;
+            .text-field__input {
+                width: 16.6rem;
             }
         
             .dropdown__option {     
-                width: 15.6rem;
+                width: 15.55rem;
             }
         
             .dropdown__apply-button{

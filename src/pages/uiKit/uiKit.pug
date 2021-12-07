@@ -4,7 +4,6 @@ include ../../components/text-field/text-field
 include ../../components/dropdown/dropdown
 include ../../components/date-dropdown/date-dropdown
 include ../../components/filter-date-dropdown/filter-date-dropdown
-include ../../components/subscription-text-field/subscription-text-field
 include ../../components/checkbox-buttons/checkbox-buttons
 include ../../components/radio-buttons/radio-buttons
 include ../../components/toggle/toggle
@@ -20,116 +19,124 @@ include ../../cards/search-card/search-card
 include ../../cards/registration-card/registration-card
 include ../../cards/room-details-card/room-details-card
 include ../../cards/log-in-card/log-in-card
+include ../../cards/number-card/number-card
 
-
-
-
+block head 
+    title Font Elements
 
 block main
 
-    .form-elements
+        img.uikit-page__icon(src= '.../../../assets/images/icon.jpg' alt="asd")
 
-        .form-elements__cell 
 
-            .form-elements__elem
-                +input-container({title: "text field", titleSecond: "default"})
-                    +text-field({type: "email", placeholder: "Email"})
-            .form-elements__elem.form-elements__elem--margined   
-                +input-container({title: "dropdown"})        
-                    +dropdown({dropdownType: "guests", placeholder: "Сколько гостей", name:"dropdown-guests", items: ["взрослые" ,
-                                                                                                                      "дети",
-                                                                                                                      "младенцы"]})      
-            .form-elements__elem.form-elements__elem--margined 
-                +input-container({title: "masked text field"})
-                    +text-field({name: "masked-text-field", mask: "date-mask"})           
-            .form-elements__elem.form-elements__elem--margined
-                +date-dropdown({title: "date dropdown", titleSecond: "date dropdown"})
-            .form-elements__elem.form-elements__elem--margined
-                +filter-date-dropdown({title: "filter date dropdown"})
-            .form-elements__elem.form-elements__elem--margined
-                +subscription-text-field({title: "subscription text field"})
+        .form-elements
+        
+            
+            .form-elements__cell 
+
+                .form-elements__elem
+                        
+                    +text-field({title: "text field", titleSecond: "default", type: "email", placeholder: "Email"})
+
+                .form-elements__elem.form-elements__elem--margined   
+                    +dropdown({title: "dropdown", dropdownType: "guests", placeholder: "Сколько гостей", name:"dropdown-guests", inputClass:"dropdown__input", items: ["взрослые" , "дети", "младенцы"]})
+  
+                .form-elements__elem.form-elements__elem--margined 
+             
+                    +text-field({title: "masked text field", name: "masked-text-field", mask: "date-mask"})
+        
+                .form-elements__elem.form-elements__elem--margined
+                    +date-dropdown({title: "date dropdown", titleSecond: "date dropdown"})
+                .form-elements__elem.form-elements__elem--margined
+                    +filter-date-dropdown({title: "filter date dropdown"})
+                .form-elements__elem.form-elements__elem--margined
+                    +text-field({title: "subscription text field", type: "email", textFieldType: "subscription"})
+                    
+            .form-elements__cell
+
+                .form-elements__elem
+                    +checkbox-buttons({title: "checkbox buttons", checkboxType: "checkboxList", positions: [{title: "Можно курить", checked: false}, 
+                                                                                                            {title: "Можно с питомцами", checked: true},
+                                                                                                            {title: "Можно пригласить гостей <span class='nowrap'> (до 10 человек)</span>", checked: true}]})                                                                                                     
+                .form-elements__elem.form-elements__elem--margined
+                    +radio-buttons({title: "radio buttons", buttons: [{title: "Мужчина", checked: true}, 
+                                                                    {title: "Женщина", checked: false}]})                                                                                                            
+                .form-elements__elem.form-elements__elem--margined
+                    +toggle({title: "toggle", desc:"Получать спецпредложения"})
+                    
+                .form-elements__elem.form-elements__elem--margined
+                    +like-button({title: "like button"})    
+                .form-elements__elem.form-elements__elem--margined
+                    +rate-button({title: "rate buttons"}, 5, 4)
+
+            .form-elements__cell 
+
+                .form-elements__elem
+                    +range-slider({title: "range-slider"})
+                .form-elements__elem.form-elements__elem--margined
+                    +buttons({title: "buttons", buttonText: "click me", theme: "fill"})
+                    +buttons({buttonText: "click me", theme: "counter's"})
+                    +buttons({buttonText: "click me", theme: "no-border"})
+                    +buttons({buttonText: "перейти к оплате", theme: "pay"})                                                      
+                .form-elements__elem.form-elements__elem--margined
+                    +pagination({title: "pagination", titleRentVariation: "1 – 12 из 100+ вариантов аренды"})
+        
+            .form-elements__cell
+
+                .form-elements__elem.form-elements__elem--margined
+                    +dropdown({title: "dropdown", dropdownType: "rooms", placeholder: "Удобства номера", name:"dropdown-rooms",inputClass:"dropdown__input", items: ["спальни", 
+                                                                                                                                        "кровати",
+                                                                                                                                        "ванные комнаты"]})
+                .form-elements__elem.form-elements__elem--margined
+                    +checkbox-buttons({title: "expandable checkbox list",  checkboxType: "checkboxExpandableList", positions:  [{title: "Завтрак", checked: false}, 
+                                                                                                                                {title: "Письменный стол", checked: true},
+                                                                                                                                {title: "Стул для кормления", checked: true},
+                                                                                                                                {title: "Кроватка", checked: true}, 
+                                                                                                                                {title: "Телевизор", checked: false},
+                                                                                                                                {title: "Шампунь", checked: false}]})                                                                                                                                                                                     
+
+            .form-elements__cell
+
+                .form-elements__elem.form-elements__elem--margined
+                    +checkbox-buttons({title: "rich checkbox buttons", checkboxType: "richCheckboxButtons", positions: [{title: "Широкий коридор", text: "Ширина коридора в номере <span class= 'nowrap'> не менее </span>  91 см.", checked: false}, 
+                                                                                                                        {title: "Помощник для инвалидов", text: "На 1 этаже вас встретит специалист <span class= 'nowrap'>и проводит</span> до номера.", checked: false}]})
                 
-        .form-elements__cell
+            .form-elements__cell
 
-            .form-elements__elem
-                +checkbox-buttons({title: "checkbox buttons", checkboxType: "checkboxList", positions: [{title: "Можно курить", checked: false}, 
-                                                                                                        {title: "Можно с питомцами", checked: true},
-                                                                                                        {title: "Можно пригласить гостей <span class='nowrap'> (до 10 человек)</span>", checked: true}]})                                                                                                     
-            .form-elements__elem.form-elements__elem--margined
-                +radio-buttons({title: "radio buttons", buttons: [{title: "Мужчина", checked: true}, 
-                                                                  {title: "Женщина", checked: false}]})                                                                                                            
-            .form-elements__elem.form-elements__elem--margined
-                +toggle({title: "toggle", desc:"Получать спецпредложения"})
-                  
-            .form-elements__elem.form-elements__elem--margined
-                +like-button({title: "like button"})    
-            .form-elements__elem.form-elements__elem--margined
-                +rate-button({title: "rate button"})
+                .form-elements__elem.form-elements__elem--margined
+                    +bullet-list({title: "bullet list", list: ["Нельзя с питомцами", 
+                                                            "Без вечеринок и мероприятий", 
+                                                            "Время прибытия &#8212 после 13:00, а выезд до 12:00"]})
 
-        .form-elements__cell 
+            .form-elements__cell
 
-            .form-elements__elem
-                +range-slider({title: "range-slider"})
-            .form-elements__elem.form-elements__elem--margined
-                +buttons({title: "buttons", buttonText: "click me", theme: "fill"})
-                +buttons({buttonText: "click me", theme: "counter's"})
-                +buttons({buttonText: "click me", theme: "no-border"})
-                +buttons({buttonText: "перейти к оплате", theme: "pay"})                                                      
-            .form-elements__elem.form-elements__elem--margined
-                +pagination({title: "pagination", titleRentVariation: "1 – 12 из 100+ вариантов аренды"})
-      
-        .form-elements__cell
+                .form-elements__elem.form-elements__elem
+                    +additional-options({options: [{title: "Комфорт", desc: "Шумопоглощающие стены", img: "mood"},
+                                                {title: "Удобство", desc: "Окно в каждой из спален", img: "location_city"} ]})
 
-            .form-elements__elem.form-elements__elem--margined
-                +input-container({title: "dropdown"})
-                    +dropdown({dropdownType: "rooms", placeholder: "Удобства номера", name:"dropdown-rooms", items: ["спальни", 
-                                                                                                                     "кровати",
-                                                                                                                     "ванные комнаты"]})
-            .form-elements__elem.form-elements__elem--margined
-                +checkbox-buttons({title: "expandable checkbox list",  checkboxType: "checkboxExpandableList", positions:  [{title: "Завтрак", checked: false}, 
-                                                                                                                            {title: "Письменный стол", checked: true},
-                                                                                                                            {title: "Стул для кормления", checked: true},
-                                                                                                                            {title: "Кроватка", checked: true}, 
-                                                                                                                            {title: "Телевизор", checked: false},
-                                                                                                                            {title: "Шампунь", checked: false}]})                                                                                                                                                                                     
+            .form-elements__cell
 
-        .form-elements__cell
+                .form-elements__elem.form-elements__elem--margined
+                    +reviews({guestName : "Мурад Сарафанов", img: ('../../../assets/images/image.jpg'), time: "5 дней назад", review: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
 
-            .form-elements__elem.form-elements__elem--margined
-                +checkbox-buttons({title: "rich checkbox buttons", checkboxType: "richCheckboxButtons", positions: [{title: "Широкий коридор", text: "Ширина коридора в номере <span class= 'nowrap'> не менее </span>  91 см.", checked: false}, 
-                                                                                                                    {title: "Помощник для инвалидов", text: "На 1 этаже вас встретит специалист <span class= 'nowrap'>и проводит</span> до номера.", checked: false}]})
-               
-        .form-elements__cell
+            .form-elements__cell
 
-            .form-elements__elem.form-elements__elem--margined
-                +bullet-list({title: "bullet list", list: ["Нельзя с питомцами", 
-                                                           "Без вечеринок и мероприятий", 
-                                                           "Время прибытия &#8212 после 13:00, а выезд до 12:00"]})
+                .form-elements__elem.form-elements__elem--margined
+                    +search-card({title: "Найдём номера под <span class= 'nowrap'>ваши пожелания</span>"}) 
 
-        .form-elements__cell
+                .form-elements__elem.form-elements__elem--margined
+                    +registration-card({title: "Регистрация аккаунта", accText: "Уже есть аккаунт на Toxin"})  
 
-            .form-elements__elem.form-elements__elem
-                +additional-options({options: [{title: "Комфорт", desc: "Шумопоглощающие стены", img: "mood"},
-                                               {title: "Удобство", desc: "Окно в каждой из спален", img: "location_city"} ]})
+            .form-elements__cell
 
-        .form-elements__cell
+                .form-elements__elem.form-elements__elem--margined
+                    +room-details-card({lux:"люкс",cost: "9 990", number:"888"}) 
+                .form-elements__elem.form-elements__elem--margined
 
-            .form-elements__elem.form-elements__elem--margined
-                +reviews({guestName : "Мурад Сарафанов", img: ('../../../assets/images/image.jpg'), time: "5 дней назад", review: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
+                    +log-in-card({title: "Войти", accText:"Нет аккаунта на Toxin?"})
 
-        .form-elements__cell
+            .form-elements__cell
 
-            .form-elements__elem.form-elements__elem--margined
-                +search-card({title: "Найдём номера под <span class= 'nowrap'>ваши пожелания</span>"}) 
-
-            .form-elements__elem.form-elements__elem--margined
-                +registration-card({title: "Регистрация аккаунта", accText: "Уже есть аккаунт на Toxin"})  
-
-        .form-elements__cell
-
-            .form-elements__elem.form-elements__elem--margined
-                +room-details-card({lux:"люкс",cost: "9 990", number:"888"}) 
-            .form-elements__elem.form-elements__elem--margined
-
-                +log-in-card({title: "Войти", accText:"Нет аккаунта на Toxin?"})
-                                
+                .form-elements__elem.form-elements__elem--margined
+                    +number-card({cost: "9 990", number:"888", lux: "люкс", img: '../../../assets/images/room.jpg', count: "145", stars:5, rate: 4}) 
+                    +number-card({cost: "9 990", number:"840", lux: "", img: '../../../assets/images/room2.jpg', count: "65", stars:5, rate: 5}) 

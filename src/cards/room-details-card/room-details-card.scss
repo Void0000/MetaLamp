@@ -7,7 +7,7 @@
     width: 20rem;
     padding-left: 1.8rem;
     padding-top: 2.4rem;
-    padding-bottom: 1.85rem;
+    padding-bottom: 0.95rem;
     padding-right: 1.8rem;
 
     &__title {
@@ -46,11 +46,11 @@
     }
 
     &__date-dropdown {
-        margin-top: 1rem;
+        margin-top: 0.85rem;
     }
 
     &__guests-dropdown {
-        margin-top: 1.05rem;
+        margin-top: 1.4rem;
     }
 
     &__cost-details{
@@ -95,6 +95,6 @@
     }
 
     &__button{
-        margin-top: 1.24rem;
+        margin-top: 1.27rem;
     }
 }

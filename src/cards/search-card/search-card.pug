@@ -8,10 +8,7 @@ mixin search-card(params)
         .search-card__dates     
             +date-dropdown({title: "прибытие", titleSecond: "выезд"})
         .search-card__dropdown
-            +input-container({title: "гости"})        
-                +dropdown({dropdownType: "guests", placeholder: "Сколько гостей", name:"dropdown-guests", items: ["взрослые" ,
-                                                                                                                  "дети",
-                                                                                                                  "младенцы"]})
+            +dropdown({title: "гости", dropdownType: "guests", placeholder: "Сколько гостей", name:"dropdown-guests", inputClass:"dropdown__input", items: ["взрослые" , "дети", "младенцы"]})
         .search-card__button
             +buttons({buttonText: "подобрать номер", theme: "pay"})                                                                                                          
 

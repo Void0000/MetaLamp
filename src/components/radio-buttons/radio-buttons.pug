@@ -1,14 +1,14 @@
 mixin radio-buttons(params)
-   
-    - let {buttons} = params
-    - let {title} = params
+    +input-container({title: params.title, titleSecond: params.titleSecond})
 
    
-    .radio-buttons
-        span.radio-buttons__title.radio-buttons__title--bold #{title}
-        form.radio-buttons__form
-            each val in buttons
-                label.radio-buttons__container
-                    span.radio-buttons__span-text= val.title
-                    input(type="radio" name="radio" checked=val.checked)
-                    span.radio-buttons__checkmark
+        - let {buttons} = params
+
+    
+        .radio-buttons
+            form.radio-buttons__form
+                each val in buttons
+                    label.radio-buttons__container
+                        span.radio-buttons__span-text= val.title
+                        input(type="radio" name="radio" checked=val.checked)
+                        span.radio-buttons__checkmark

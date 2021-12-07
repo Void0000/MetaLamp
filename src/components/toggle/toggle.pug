@@ -1,18 +1,17 @@
 mixin toggle(params)
    
-   
-    - let {title} = params
+    +input-container({title: params.title, titleSecond: params.titleSecond})
+
     - let {desc} = params
 
     
    
-    .toggle
-        span.toggle__title.toggle__title--bold 
-        form.toggle__form
-            label.toggle__switch
-                input.toggle__input(type='checkbox')
-                span.toggle__slider
-            span.toggle__desc #{desc}
+        .toggle
+            form.toggle__form
+                label.toggle__switch
+                    input.toggle__input(type='checkbox')
+                    span.toggle__slider
+                span.toggle__desc #{desc}
 
 
 

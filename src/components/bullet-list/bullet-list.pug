@@ -1,16 +1,16 @@
 mixin bullet-list(params)
 
-    - let {list} = params
-    - let {title} = params
+        +input-container({title: params.title, titleSecond: params.titleSecond})
 
-    
-   
-  
-    .bullet-list
-        span.like-button__title.like-button__title--bold #{title}
-        ul.bullet-list__ul
-            each val in list
-                li!= val
+            - let {list} = params
+
+            
+        
+        
+            .bullet-list
+                ul.bullet-list__ul
+                    each val in list
+                        li!= val
 
 
             

@@ -1,0 +1,130 @@
+@import '../../assets/mixinsAndMixes.scss';
+
+.number-card{
+    width: 16.9rem;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    z-index: 1;
+    &__picture {
+        position: relative;
+        z-index: 1;
+
+        &:hover,
+        &:focus {
+
+            .number-card__cell-button,
+            .number-card__left-cell,
+            .number-card__right-cell {
+                visibility: visible;
+                opacity:1;
+
+            }
+        }
+
+        img {
+            z-index: -2;
+            position: absolute;
+            left: -0.05rem; top: -0.1rem;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+    }
+
+    &__buttons {
+       
+       display: grid;
+       text-align: center;
+       justify-content: space-between;
+       grid-template-columns: 2.65rem 3rem;
+       height: 9.4rem;
+    }
+
+    &__left-cell,
+    &__right-cell {
+        visibility: hidden;
+        opacity:0;
+        transition:visibility 0.2s , opacity 0.2s ;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+        border-radius: 5px;
+     }
+
+     &__right-cell {
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 85%, rgba(255, 255, 255, 0) 85%);
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+     }
+
+    &__cell-button {
+        margin-top: 3.85rem;
+        background: none;
+        cursor: pointer;
+        border: none;
+        font-family: 'material icons';
+        color: white;
+        font-size: 1.35rem;
+        transform: rotate(90deg);
+        visibility: hidden;
+        opacity:0;
+        transition:visibility 0.2s , opacity 0.2s ;
+     }
+
+     &__cell-circle-buttons {
+        top: 7.95rem; left: 13.3rem;
+        position: absolute;
+        display: flex;
+        gap: 0.25rem;
+    }
+
+     &__circle {
+        cursor: pointer;
+        background: none;
+        border: 1px solid white;
+        border-radius: 50%;
+        padding: 0.16rem;
+
+        &--current {
+            background: white;
+         }
+
+    }
+
+    &__desc  {
+        margin-top: 0.95rem;
+        border-bottom: 1px solid $darkshade25;
+        background: white;
+        padding-left: 0.55rem;
+        padding-right: 0.5rem;
+        padding-bottom: 0.4rem;
+        transform: scale(0.91);
+
+        .room-details-card__numbers-lux {
+            font-size: 0.75rem;
+            margin-left: 0rem;
+        }
+
+        .room-details-card__title-cost {
+            font-size: 1rem;
+            padding-top: 0.2rem;
+        }
+    }
+    
+
+    &__rate  {
+        margin-top: 0.15rem;
+        align-items: flex-end;
+        @include body;
+        color: $darkshade50;
+        padding-left: 1.2rem;
+        padding-right: 1.25rem;
+        padding-bottom: 0.65rem;
+        display: flex;
+    }
+
+    &__rate-button {
+        flex-grow: 1;
+    }
+
+    &__count-reviews {
+
+        font-weight: bold;
+    }
+}

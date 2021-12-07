@@ -1,27 +1,50 @@
 @import '../../assets/mixinsAndMixes.scss';
 
 .text-field {
-    padding: 0;
-    border: none;
-    @include field;
-    outline:none;
-
-    &::placeholder {
-        color: $darkshade25
-    }
-
-    &:hover, 
-    &:focus  {
-        border-color: $darkshade50;
+    margin:0; 
+    padding:0; 
+     &__input {
+        padding: auto;
+        border: none;
+        @include field;
         outline:none;
-    }    
 
-    &:hover::placeholder, 
-    &:focus::placeholder {
-        color: $darkshade50;
-    }
+        &::placeholder {
+            color: $darkshade25
+        }
 
-    
+        &:hover, 
+        &:focus,
+        &:hover::placeholder, 
+        &:focus::placeholder   {
+            border-color: $darkshade50;
+            outline:none;
+        }    
+}
     
 }
+
+.text-field--subscription {
+    position: relative;
+
+
+    &::after{
+        cursor: pointer;
+        position: absolute;
+        font-family: 'material icons';
+        content: 'arrow_forward';
+        color: $purple;
+        font-size: 1.47rem;
+        top: 23%; left: 42.7%
+    }
+
+
+    .text-field__input {
+    width: 16.7rem;
+}
+    
+}
+    
+    
+    
 
